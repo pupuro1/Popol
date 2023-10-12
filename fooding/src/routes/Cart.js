@@ -26,7 +26,10 @@ shopping_cart_checkout
 					<h3>택배배송 상품:2개</h3>
 					<div class="apple1">
 						<div id='img-a'></div>
-						<p> [택배배송] SSG 프리미엄 감홍사과 3 kg </p>
+						<a href=''>[택배배송] SSG 프리미엄 감홍사과 3 kg</a>
+						<p>6980원 1개</p>
+						<button>바로 구매</button>
+
 					</div>
 					<div id="img-b"></div>
 				</div>
