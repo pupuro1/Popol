@@ -1,0 +1,113 @@
+.cart1{
+  width: 1000px;
+  height: 650px;
+  
+}
+.jang{
+  padding-top: 50px;
+}
+.cart2{
+  width: 700px;
+  height: 450px;
+  float: left;
+}
+.cart2 span{
+  font-size: 100px;
+  margin-left: 70px;
+}
+.cart3{
+  margin: auto;
+  margin-top: 100px;
+  display: block;
+  width: 35%;
+  height: 250px;
+}
+.cart3 button{
+ display: block;
+ margin: auto;
+ width: 150px;
+ height: 50px;
+ background-color: #F9F9F9;
+}
+.cart3 button:hover {
+  background-color: #222222;
+  color: white;
+}
+.cart3 p{
+  text-align: center;
+}
+
+.cart4{
+  width: 300px;
+  height: 450px;
+  float: right;
+  line-height: 2;
+  
+}
+.cart4 dd{
+  float: right;
+}
+.cart4-1{
+  border-top: 1px solid;
+  margin-top: 40px;
+  line-height: 1;
+}
+.cart4-1 dl{
+  color: #FF3E3E;
+}
+.cart4-1 button:nth-child(2){
+  background-color: #FF3E3E;
+  border: 1px solid;
+  border-color: #FF3E3E;
+  color: white;
+  width: 250px;
+  height: 75px;
+  display: block;
+  margin: auto ;
+  margin-top: 40px;
+  
+}
+.cart4-1 button:nth-child(2):hover{
+  background-color: #222222;
+  border-color: #222222;
+}
+
+.cart4-1 button:nth-child(4){
+  background-color: #FFFFFF;
+  border: 1px solid #ccc;
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 35px;
+  
+}
+.cart4-1 button:nth-child(4):hover{
+  color: white;
+  background-color: #222222;
+}
+
+
+
+
+.apple{
+  background-color: aqua;
+  width: 650px;
+  height: 500px;
+  float: left;
+}
+.apple1{
+  float: left;
+  width: 650px;
+  height: 150px;  
+  background-color: burlywood;
+}
+ 
+#img-a{
+  background-image: url(/img/aaa.jpg);
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-position: center; 
+  margin: 15px;
+  float: left;
+}
