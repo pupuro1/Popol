@@ -7,6 +7,7 @@
   width: 1000px;
   height: 600px;
   display: flex;
+
 }
 .product-img-box{
   width: 500px;
@@ -14,11 +15,12 @@
   float: left;
   overflow: hidden;
   border-radius: 10px;
-  background-color: black;    
+  background-color: black;   
 }
 .product_img{
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .product-contents{
   width: 500px;
@@ -49,10 +51,12 @@
   margin-right: 50px;
   margin-top: 0px;
 }
+
 .product-price span{
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  border: 1px solid #000;
+  // border: 1px solid #000;
+  margin-left: 5px;
 }
 .product-explanation{
   display: inline-table;
@@ -70,15 +74,8 @@
   margin-bottom: 20px;
   padding: 10px;
 }
-
 #count span{
 }
-
-
-
-
-
-
 #buy button:nth-child(1){
   background-color: black;
   border-color: white;
@@ -100,15 +97,12 @@
   margin: 0px;
 }
 
-
-
-
 #back a{
   border: 1px solid #000;
-  width: 150px;
-  height: 40px;
-  
-  display: flex;
-  align-items: center;
-  text-align: center;
+  color: white;
+  background-color: dimgrey;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: auto;
+  font-weight: 800;
 }
