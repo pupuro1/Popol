@@ -28,7 +28,7 @@ shopping_cart_checkout
 						<div id='img-a'></div>
 						<p> [택배배송] SSG 프리미엄 감홍사과 3 kg </p>
 					</div>
-					<div id="img-b"></div>
+					<div></div>
 				</div>
 				
 			
