@@ -1,0 +1,114 @@
+.product-card{
+  width: 1000px;
+  height: 800px;
+  margin:  50px auto;
+}
+#product-container{
+  width: 1000px;
+  height: 600px;
+  display: flex;
+}
+.product-img-box{
+  width: 500px;
+  height: 500px;
+  float: left;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: black;    
+}
+.product_img{
+  width: 100%;
+  height: 100%;
+}
+.product-contents{
+  width: 500px;
+  height: 500px;
+  display: block;
+  padding-left: 30px;
+}
+.product-name{
+  width: 90%;
+  height: 80px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+@font-face {
+  font-family: 'TAEBAEKfont';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/TAEBAEKfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.product-price{
+  width: 130px;
+  font-family: 'TAEBAEKfont';
+  font-size: 30px;
+  float: right;
+  border-bottom: 1px solid #000;
+  text-align: right;
+  margin-right: 50px;
+  margin-top: 0px;
+}
+.product-price span{
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 1px solid #000;
+}
+.product-explanation{
+  display: inline-table;
+  width: 90%;
+  height: 120px;
+  margin-top: 30px;
+  /* border-top: 1px solid orange; */
+  padding: 5px;
+}
+
+#count{
+  border: 1px solid gray;
+  width: 90%;
+  height:70px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#count span{
+}
+
+
+
+
+
+
+#buy button:nth-child(1){
+  background-color: black;
+  border-color: white;
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  width: 47%;
+  height: 40px;
+  margin: 0px;
+}
+#buy button:nth-child(2){
+  border-color: white;
+  background-color: red;
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  width: 47%;
+  height: 40px;
+  margin: 0px;
+}
+
+
+
+
+#back a{
+  border: 1px solid #000;
+  width: 150px;
+  height: 40px;
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+.Loginid{
+  width: 330px;
+  height: 400px;
+  margin: auto ;
+  line-height: 3;
+}
+
+.Loginid input:nth-child(2), .Loginid input:nth-child(3){
+  width: 323px;
+  height: 30px;
+}
+.Loginid div label{
+  float: left;
+  cursor: pointer;
+  font-size: 11px;
+  margin-right: 35px;
+  
+}
+.Loginid div{
+  margin-bottom: 60px;
+}
+.Loginid div a{
+  list-style: none;
+  float: left;
+  font-size: 11px;
+  padding-right: 7px;
+  padding-left: 7px;
+  border-right: 1px solid;
+  line-height: 1;
+  margin-top: 10px;
+}
+.Loginid a:last-child{
+  border-right: none;
+}
+
+.Loginid button{
+  width: 330px;
+  height: 50px;
+  background-color: #FF3E3E;
+  color: white;
+  border: 1px solid;
+  border-color: #FF3E3E;
+ margin-bottom: 50px;
+}

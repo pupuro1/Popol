@@ -1,0 +1,38 @@
+#join{
+    width: 700px;
+    margin: 50px auto;
+
+}
+#join h1{
+    text-align: center;
+}
+#join-form{
+    padding: 0;
+}
+#join-form li{
+    padding: 15px 10px;
+}
+#join-form li input{
+    padding: 7px;
+    width: 300px;
+    display: block;
+    margin: auto;
+    border: 0px solid #000;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+#join-form li:last-child{
+    border: 0px solid #000;
+}
+#join-form #join-btn{
+    padding: 13px 70px;
+    display: block;
+    margin: auto;
+    background-color: #FFCF02;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 0px solid #000;
+
+}
