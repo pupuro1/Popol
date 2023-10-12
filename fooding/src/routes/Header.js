@@ -28,7 +28,7 @@ const Header = () => {
 
           <ul id="header_navi">
             <li><a href=""> <BsFillPersonFill size={24} width={50} height={50} /> <span>My</span>  </a></li>
-            <li><a href=""> <BsFillCartFill size={22} width={50} height={50}/> <span>장바구니</span> </a></li>
+            <li><NavLink to="/cart"> <BsFillCartFill size={22} width={50} height={50}/> <span>장바구니</span> </NavLink></li>
           </ul>
 
         </div>
