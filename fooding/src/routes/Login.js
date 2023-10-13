@@ -1,10 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import '../scss/login.scss';
+import { useNavigate } from "react-router-dom";
 import { setCookie } from '../cookie';
 
 
 const Login = () => {
+  const navigate = useNavigate();
   const onLogin = (e) => {
     e.preventDefault()
     const id = e.target.user_id.value;
@@ -12,7 +14,8 @@ const Login = () => {
     axios.post('/login',{id,pwd})
     .then(()=>{
       setCookie('login',id);
-      console.log('로그인');      
+      console.log('로그인');
+      navigate('/');      
     })
     .catch((error)=>{
       console.error(error);
