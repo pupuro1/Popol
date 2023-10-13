@@ -22,12 +22,15 @@ shopping_cart_checkout
 		<button>로그인</button>
 		</div>
 	</div> */}
+				
 				<div class="apple">
 					<h3>택배배송 상품:2개</h3>
+					
+					
 					<div class="apple1">
 						<div id='img-a'></div>
-						<a href=''>[택배배송] SSG 프리미엄 감홍사과 3 kg</a>
-						<p>6980원 1개</p>
+							< div id="ap">< a href = '' > [택배배송] SSG 프리미엄 감홍사과 3 kg </a></div >
+							<p>6980원 1개</p>
 						<button>바로 구매</button>
 						< link rel = "stylesheet"
 							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -36,19 +39,55 @@ shopping_cart_checkout
 					</div>
 
 					<div class="choco">
-						< div id='img-b'></div> <	a href=''> [택배배송] SSG 프리미엄 감홍사과 3 kg </a>
+						< div id='img-b'></div>
+						< div id="ap">< a href = '' > [택배배송] SSG 프리미엄 감홍사과 3 kg </a></div>
 						<p> 18200 원 1 개 </p>
 						<button > 바로 구매 </button>
 						<link rel="stylesheet"
 							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /><a href="" >
 							<span class="material-symbols-outlined">
 							close 삭제 </span></a >
-						
 					</div>
+
+						<div class="choco">
+						< div id='img-b'></div>
+						< div id="ap">< a href = '' > [택배배송] SSG 프리미엄 감홍사과 3 kg </a></div>
+						<p> 18200 원 1 개 </p>
+						<button > 바로 구매 </button>
+						<link rel="stylesheet"
+							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /><a href="" >
+							<span class="material-symbols-outlined">
+							close 삭제 </span></a >
+					</div>
+
+						<div class="choco">
+						<div id='img-b'></div>
+						< div id="ap">< a href = '' > [택배배송] SSG 프리미엄 감홍사과 3 kg </a></div>
+						<p> 18200 원 1 개 </p>
+						<button > 바로 구매 </button>
+						<link rel="stylesheet"
+							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /><a href="" >
+							<span class="material-symbols-outlined">
+							close 삭제 </span></a >
+					</div>
+
+					<div class="choco">
+						< div id='img-b'></div>
+						< div id="ap">< a href = '' > [택배배송] SSG 프리미엄 감홍사과 3 kg </a></div>
+						<p> 18200 원 1 개 </p>
+						<button > 바로 구매 </button>
+						<link rel="stylesheet"
+							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /><a href="" >
+							<span class="material-symbols-outlined">
+							close 삭제 </span></a >
+					</div>
+
 				</div>
 				
+				
+				
 			
-		<div class="cart4">
+			<div class="cart4">
 		< link rel = "stylesheet"
 						href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 					< span class = "material-symbols-outlined" >
@@ -75,7 +114,8 @@ shopping_cart_checkout
 						<br></br>
 						<button>선물하기</button>
 		</div>
-	</div>
+			</div>
+				
 </div>
     </> 
   )
