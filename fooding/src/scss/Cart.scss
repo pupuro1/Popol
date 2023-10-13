@@ -1,7 +1,6 @@
 .cart1{
   width: 1000px;
-  height: 650px;
-  
+  height: 750px;
 }
 .jang{
   padding-top: 50px;
@@ -39,9 +38,12 @@
 
 .cart4{
   width: 300px;
-  height: 450px;
+  height: 500px;
   float: right;
   line-height: 2;
+  border: 1px solid #EEEEEE;
+  position: sticky;
+  top: 200px;
   
 }
 .cart4 dd{
@@ -88,11 +90,16 @@
 
 
 .apple{
-  
   width: 650px;
-  height: 500px;
+  height: 600px;
   float: left;
+  overflow: auto;
+
   
+}
+.apple::-webkit-scrollbar {
+  display: none;
+
 }
 .apple1, .choco{
   float: left;
@@ -110,7 +117,6 @@
 }
 .apple1 p, .choco p{
   font-size: 20px;
-  border-top: 1px solid #ccc;
 }
 .apple1 button,.choco button{
   width: 120px;
@@ -118,7 +124,7 @@
   color: white;
   border-color: #FF3E3E;
   float: right;
-  margin-top: -50px;
+  margin-top: -70px;
   margin-right: 50px;
   
 }
@@ -133,8 +139,9 @@
   border: 1px solid #ccc;
   height: 25px;
   background-color: #FFFFFF;
-  width: 117px;
+  width: 118px;
   text-align: center;
+  margin-top: -20px;
 }
 .apple1 span:hover, .choco span:hover{
   background-color: #222222;
@@ -164,4 +171,10 @@
   background-position: center; 
   margin-right: 20px;
   float: left;
+}
+
+
+#ap{
+  height: 50px;
+  background-color: #FFD040;
 }
