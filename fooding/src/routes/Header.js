@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState}from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs"; //장바구니
 import { BsFillPersonFill } from "react-icons/bs"; //my
@@ -35,6 +35,7 @@ const Header = () => {
 
         <ul id="header-bottom">
           <li><NavLink to='/products/1'>과일</NavLink>
+          {/* <li><NavLink to='/products/1' onClick={onCategory}>과일</NavLink> */}
             <div className="dropdown-menu">
               <table >
                 <tbody>
