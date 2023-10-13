@@ -3,8 +3,8 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs"; //장바구니
 import { BsFillPersonFill } from "react-icons/bs"; //my
 import {NavLink, useNavigate} from 'react-router-dom';
+import { getCookie, removeCookie } from "../cookie";
 import '../scss/Header.scss'
-import { getCookie } from "../cookie";
 
 
 const Header = () => {
@@ -13,10 +13,15 @@ const Header = () => {
   console.log('user Log',user);
   const Ck_Cookie = ()=>{
     if (getCookie('login')) {
-      navigate(`/mypage/${getCookie('login')}`)
+      return navigate(`/mypage/${getCookie('login')}`)
     }else{
-      alert('로그인을 해주세요')  
+      return alert('로그인을 해주세요');
+      //로그인 페이지로 이동
     }
+  }
+  const Logout = ()=>{
+    removeCookie('login');
+    navigate('/');
   }
   return(
     <>
@@ -24,19 +29,19 @@ const Header = () => {
           <div className="bg-bottom"></div>
       </div>
       <div id="header">
-        
-      
-        
         {getCookie('login') == null ?
+        
         <div id="header-top">
           <NavLink to="/login">로그인</NavLink>
           <NavLink to='/join'>회원가입</NavLink>
         </div>
+        // 로그인 하기 전
         :
-        <div>
-          {user}
-          <button>로그아웃</button>
+        <div id="header-top">
+          <p>{user}</p>
+          <button onClick={Logout}>로그아웃</button>
         </div>
+        //로그인 후
         }
 
         <div id="header-middle">
