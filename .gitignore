@@ -1,4 +1,4 @@
 node_modules
-config
-upload
+/config
+/upload
 fooding/node_modules
