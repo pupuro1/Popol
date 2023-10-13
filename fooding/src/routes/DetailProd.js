@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink, useLocation  } from 'react-router-dom'
 import axios from 'axios';
 import '../scss/detailProd.scss'
