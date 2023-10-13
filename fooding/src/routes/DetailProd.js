@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { NavLink, useLocation  } from 'react-router-dom'
 import axios from 'axios';
 import '../scss/detailProd.scss'
@@ -37,7 +37,7 @@ const DetailProd = () => {
                             {number} 
                             <button onClick={increase}>+</button>
                         </div>
-                        <div>합계  {state.detailProduct.price*{number}} 원  </div>
+                        <div>합계  {state.detailProduct.price*number} 원  </div>
                     </div>
 
                     <div id="buy">
