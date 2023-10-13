@@ -9,6 +9,7 @@ import AddProd from './routes/AddProd';
 import DetailProd from './routes/DetailProd';
 import Login from './routes/Login';
 import Cart from './routes/Cart';
+import Mypage from './routes/Mypage'
 import Category from './routes/Category';
 
 function App() {
