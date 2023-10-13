@@ -60,6 +60,7 @@ const Header = () => {
 
         <ul id="header-bottom">
           <li><NavLink to='/products/1'>과일</NavLink>
+          {/* <li><NavLink to='/products/1' onClick={onCategory}>과일</NavLink> */}
             <div className="dropdown-menu">
               <table >
                 <tbody>
