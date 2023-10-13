@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import '../scss/login.scss';
+import { setCookie } from '../cookie';
 
 
 const Login = () => {
@@ -10,7 +11,8 @@ const Login = () => {
     const pwd = e.target.user_pwd.value;
     axios.post('/login',{id,pwd})
     .then(()=>{
-      
+      setCookie('login',id);
+      console.log('로그인');      
     })
     .catch((error)=>{
       console.error(error);
