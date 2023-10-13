@@ -3,8 +3,8 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs"; //장바구니
 import { BsFillPersonFill } from "react-icons/bs"; //my
 import {NavLink, useNavigate} from 'react-router-dom';
-import '../scss/Header.scss'
 import { getCookie, removeCookie } from "../cookie";
+import '../scss/Header.scss'
 
 
 const Header = () => {
@@ -21,6 +21,7 @@ const Header = () => {
   }
   const Logout = ()=>{
     removeCookie('login');
+    navigate('/');
   }
   return(
     <>
