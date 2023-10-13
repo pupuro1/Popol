@@ -11,7 +11,6 @@ import Login from './routes/Login';
 import Cart from './routes/Cart';
 import Category from './routes/Category';
 import Mypage from './routes/Mypage'
-import Category from './routes/Category';
 
 function App() {
   return (

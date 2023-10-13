@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useLocation  } from 'react-router-dom'
 import axios from 'axios';
 import '../scss/detailProd.scss'
+import { getCookie } from '../cookie';
 
 const DetailProd = () => {
     const location = useLocation();
@@ -16,6 +17,20 @@ const DetailProd = () => {
     const decrease = () => {
         setNumber(number - 1);
     };
+    const addCart = async () => {
+        const userId = getCookie('login');
+        const prodNum = state.detailProduct.prodNum; 
+        const quantity = number;
+        // console.log('타입확인',typeof(prodNum));
+        // console.log('타입확인',typeof(quantity));
+        await axios.post('/cart', { userId, prodNum, quantity })
+        .then(() => {
+            console.log("장바구니 넣기 성공!");
+        })
+        .catch(err => {
+            console.error(err);
+        })
+    }
     return (
         
         <div className="product-card">
@@ -41,7 +56,7 @@ const DetailProd = () => {
                     </div>
 
                     <div id="buy">
-                        <button>장바구니</button>
+                        <button onClick={addCart}>장바구니</button>
                         <button>바로구매</button>
                     </div>
                 </div>
