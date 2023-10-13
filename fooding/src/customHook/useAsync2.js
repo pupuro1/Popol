@@ -31,8 +31,8 @@ function reducer(state, action){
     }
 }
 
-function useAsync(callback, deps = []) {
-    console.log("useAsync진입: ", deps);
+function useAsync2(callback, deps=[]) {
+    // console.log("useAsync2진입: ",callback);
     const [state, dispatch] = useReducer(reducer, initialState);
     const fetchDate = async () => {
         dispatch({type: "LOADING"});
@@ -54,7 +54,7 @@ function useAsync(callback, deps = []) {
     useEffect(()=>{ // useEffect(()=>{}, [])는 처음 1회만 실행 
         fetchDate();
     // eslint-disable-next-line
-    }, deps); //deps는 빈배열([]) 34라인
+    }, deps);
     return [state, fetchDate];
 }
-export default useAsync
+export default useAsync2

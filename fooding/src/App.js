@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import {BrowserRouter, Routes, Route, NavLink, Link, useParams} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Header from './routes/Header';
 import Footer from './routes/Footer';
 import Product from './routes/Products';
@@ -9,31 +9,23 @@ import AddProd from './routes/AddProd';
 import DetailProd from './routes/DetailProd';
 import Login from './routes/Login';
 import Cart from './routes/Cart';
+import Category from './routes/Category';
 import Mypage from './routes/Mypage'
-import { getCookie } from './cookie';
+import Category from './routes/Category';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/* <ul>
-        <li><NavLink to='/'>메인</NavLink></li>
-        <li><NavLink to='/2'>메인2</NavLink></li>
-        <li><NavLink to='/3'>메인3</NavLink></li>
-        <li><Link to='/product'>product</Link></li>
-      </ul> */}
       <Routes>
-        {/* <Route path='/' element={<Main></Main>}></Route> */}
         <Route path='/' element={<Product></Product>}></Route>
         <Route path='/product' element={<Product></Product>}></Route>
         <Route path='/join' element={<Join></Join>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/add_prod' element={<AddProd></AddProd>}></Route>
         <Route path='/products/all/:id' element={<DetailProd></DetailProd>}></Route>
-        <Route path='/products/:category' element={<Product></Product>}></Route>
+        <Route path='/products/:category' element={<Category></Category>}></Route>
         <Route path='/Mypage/:user' element={<Mypage></Mypage>}></Route>
-        
-
 
 
         <Route path='/cart' element={<Cart></Cart>}></Route>
