@@ -29,9 +29,22 @@ shopping_cart_checkout
 						<a href=''>[택배배송] SSG 프리미엄 감홍사과 3 kg</a>
 						<p>6980원 1개</p>
 						<button>바로 구매</button>
-
+						< link rel = "stylesheet"
+							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+						<a href=""><span class = "material-symbols-outlined" >
+							close 삭제</span></a>
 					</div>
-					<div id="img-b"></div>
+
+					<div class="choco">
+						< div id='img-b'></div> <	a href=''> [택배배송] SSG 프리미엄 감홍사과 3 kg </a>
+						<p> 18200 원 1 개 </p>
+						<button > 바로 구매 </button>
+						<link rel="stylesheet"
+							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /><a href="" >
+							<span class="material-symbols-outlined">
+							close 삭제 </span></a >
+						
+					</div>
 				</div>
 				
 			
