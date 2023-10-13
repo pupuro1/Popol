@@ -7,21 +7,27 @@ import { setCookie } from '../cookie';
 
 const Login = () => {
   const navigate = useNavigate();
+  const setTime = 3600000; //1시간
+
   const onLogin = (e) => {
     e.preventDefault()
     const id = e.target.user_id.value;
     const pwd = e.target.user_pwd.value;
     axios.post('/login',{id,pwd})
     .then(()=>{
-      setCookie('login',id);
+      setCookie('login',id,{
+         expires: new Date(Date.now() + setTime),
+        });
       console.log('로그인');
-      navigate('/');      
+      navigate('/');
+      console.log('test');
     })
     .catch((error)=>{
       console.error(error);
       console.log('전송오류입니다.');
     })
   }
+  
   return(
     <>
       <form onSubmit={onLogin} class="Loginid">
