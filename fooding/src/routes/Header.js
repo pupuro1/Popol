@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs"; //장바구니
 import { BsFillPersonFill } from "react-icons/bs"; //my
-import {NavLink} from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 import '../scss/Header.scss'
+import { getCookie } from "../cookie";
 
 
 const Header = () => {
+  const navigate = useNavigate();
+  const user = getCookie('login');
+  console.log('user Log',user);
+  const Ck_Cookie = ()=>{
+    if (getCookie('login')) {
+      navigate(`/mypage/${getCookie('login')}`)
+    }else{
+      alert('로그인을 해주세요')  
+    }
+  }
   return(
     <>
       <div className="background">
@@ -14,10 +25,19 @@ const Header = () => {
       </div>
       <div id="header">
         
+      
+        
+        {getCookie('login') == null ?
         <div id="header-top">
-            <NavLink to="/login">로그인</NavLink>
-            <NavLink to='/join'>회원가입</NavLink>
+          <NavLink to="/login">로그인</NavLink>
+          <NavLink to='/join'>회원가입</NavLink>
         </div>
+        :
+        <div>
+          {user}
+          <button>로그아웃</button>
+        </div>
+        }
 
         <div id="header-middle">
           <NavLink to="/" id="logo">Fooding</NavLink>
@@ -27,7 +47,7 @@ const Header = () => {
           </div>
 
           <ul id="header_navi">
-            <li><a href=""> <BsFillPersonFill size={24} width={50} height={50} /> <span>My</span>  </a></li>
+            <li><a onClick={Ck_Cookie}> <BsFillPersonFill size={24} width={50} height={50} /> <span>My</span>  </a></li>
             <li><NavLink to="/cart"> <BsFillCartFill size={22} width={50} height={50}/> <span>장바구니</span> </NavLink></li>
           </ul>
 
