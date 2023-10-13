@@ -11,7 +11,7 @@ import Login from './routes/Login';
 import Cart from './routes/Cart';
 import Category from './routes/Category';
 import Mypage from './routes/Mypage'
-import { getCookie } from './cookie';
+import Category from './routes/Category';
 
 function App() {
   return (
@@ -25,7 +25,6 @@ function App() {
         <Route path='/add_prod' element={<AddProd></AddProd>}></Route>
         <Route path='/products/all/:id' element={<DetailProd></DetailProd>}></Route>
         <Route path='/products/:category' element={<Category></Category>}></Route>
-        <Route path='/products/:category' element={<Product></Product>}></Route>
         <Route path='/Mypage/:user' element={<Mypage></Mypage>}></Route>
 
 
