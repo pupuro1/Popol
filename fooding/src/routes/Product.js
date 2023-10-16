@@ -23,20 +23,30 @@ const Product = ( {product} ) => {
     }  
 
     return (
-        <div className="product-card">
-            <NavLink to={`/products/all/${id}`} state={{detailProduct: detailProduct}}>
-            <div className='product-img'>
-                <img className='product_img'src={product.imageUrl} alt="" />
-            </div>
-            <div className='product-contents'>
-                <span className='product-name'>{product.name}</span>
-                <span className='product-price'>{product.price}</span>
-                {/* <div className='product-seller'>
-                    <img src="images/icons/avatar.png" alt=""/>{product.seller}
+            <>
+                {/* <div className="product-card">
+                    <NavLink to={`/products/all/${id}`} state={{detailProduct: detailProduct}}>
+                        <div className='product-img-box'>
+                            <img className='product_img'src={product.imageUrl} alt="" />
+                        </div>
+                        <div className='product-contents'>
+                            <span className='product-name'>{product.name}</span>
+                            <span className='product-price'>{product.price}</span>
+                        </div>
+                    </NavLink>
                 </div> */}
-            </div>
-            </NavLink>
-        </div>
+                <div className="prd-out">
+                    <NavLink to={`/products/all/${id}`} state={{detailProduct: detailProduct}}>
+                        <div className='prd-img-box'>
+                            <img className='prd-img'src={product.imageUrl} alt="" />
+                        </div>
+                        <div className='prd-contents'>
+                            <span className='prd-name'>{product.name}</span>
+                            <span className='prd-price'>{product.price}</span>
+                        </div>
+                    </NavLink>
+                </div>
+            </>
     );
 };
 

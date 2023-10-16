@@ -34,7 +34,7 @@ const Products = () => {
   return(
     <>
       <h2>상품 목록</h2>
-      <div id="products">
+      <div id="products-list">
         {products.map(product => <Product key = {product.id} product={product} />)}
       </div>
     </>

@@ -5,7 +5,7 @@ import '../scss/detailProd.scss'
 import { getCookie } from '../cookie';
 import { API_URL } from '../config/contansts'
 
-const DetailProd = () => {
+const DetailProd = () => { 
     const location = useLocation();
     const { state } = location;
     console.log("state: ", state);
@@ -38,39 +38,53 @@ const DetailProd = () => {
     }
     return (
         
-        <div className="product-card">
-            <div id='product-container'>
-
-                <div className='product-img-box'>
-                    <img className='product_img'src={state.detailProduct.imageUrl} alt="" />
-                </div>
-
-                <div className='product-contents'>
-                    <h3 className='product-name'> {state.detailProduct.name}</h3>
-                    <h2 className='product-price'><em>{state.detailProduct.price}</em><span>원</span></h2>
-                    <p className='product-explanation'>설명: {state.detailProduct.content}</p>
-                    
-                    <div id="count">
-                        <span>상품 개수</span>
-                        <div> 
-                            <button onClick={decrease}>-</button> 
-                            {number} 
-                            <button onClick={increase}>+</button>
+        <div>
+            <div className="product-card">
+                <div id='product-container'>
+    
+                    <div className='product-img-box'>
+                        <img className='product_img'src={state.detailProduct.imageUrl} alt="" />
+                    </div>
+    
+                    <div className='product-contents'>
+                        <h3 className='product-name'> {state.detailProduct.name}</h3>
+                        <h2 className='product-price'>  <em>{state.detailProduct.price}</em> <span>원</span> </h2>
+                        <p className='product-explanation'>설명: {state.detailProduct.content}</p>
+                        
+                        <div id="count">
+                            <span>상품 개수</span>
+                            <div id='counter'>
+                                <div id='count-btn'> 
+                                    <button onClick={decrease}>-</button> 
+                                    <div><span>{number}</span></div>
+                                    <button onClick={increase}>+</button>
+                                </div>
+                                <div id='sum'><span>원</span>  <em>{state.detailProduct.price*number}</em> <span>합계</span>  </div>
+                            </div>
                         </div>
+<<<<<<< HEAD
+    
+                        <div id="buy">
+                            <button>장바구니</button>
+                            <button>바로구매</button>
+                        </div>
+    
+=======
                         <div>합계  {state.detailProduct.price*number} 원  </div>
                     </div>
 
                     <div id="buy">
                         <button onClick={addCart}>장바구니</button>
                         <button>바로구매</button>
+>>>>>>> dc206fe9c88d8afcdb67f84d8702498c145a7668
                     </div>
                 </div>
+    
+                <div id='back'>
+                    <NavLink to='/'>뒤로</NavLink>
+                </div>
+    
             </div>
-
-            <div id='back'>
-                <NavLink to='/'>뒤로</NavLink>
-            </div>
-
         </div>
     );
 };
