@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../scss/login.scss';
 import { useNavigate } from "react-router-dom";
 import { setCookie } from '../cookie';
+import { API_URL } from '../config/contansts'
 
 
 const Login = () => {
@@ -13,7 +14,7 @@ const Login = () => {
     e.preventDefault()
     const id = e.target.user_id.value;
     const pwd = e.target.user_pwd.value;
-    axios.post('/login',{id,pwd})
+    axios.post(`${API_URL}/login`,{id,pwd})
     .then(()=>{
       setCookie('login',id,{
          expires: new Date(Date.now() + setTime),

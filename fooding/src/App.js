@@ -18,7 +18,6 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Product></Product>}></Route>
-        <Route path='/product' element={<Product></Product>}></Route>
         <Route path='/join' element={<Join></Join>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/add_prod' element={<AddProd></AddProd>}></Route>

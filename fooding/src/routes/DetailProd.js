@@ -3,6 +3,7 @@ import { NavLink, useLocation  } from 'react-router-dom'
 import axios from 'axios';
 import '../scss/detailProd.scss'
 import { getCookie } from '../cookie';
+import { API_URL } from '../config/contansts'
 
 const DetailProd = () => {
     const location = useLocation();
@@ -23,7 +24,7 @@ const DetailProd = () => {
         const quantity = number;
 
         if(userId){ //로그인 했을때만 작동하게
-            await axios.post('/cart', { userId, prodNum, quantity })
+            await axios.post(`${API_URL}/cart`, { userId, prodNum, quantity })
             .then(() => {
                 alert("장바구니에 추가했습니다.")
             })
