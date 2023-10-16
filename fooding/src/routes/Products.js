@@ -2,16 +2,15 @@ import React, {useState} from "react";
 import axios from 'axios';
 import Product from "./Product";
 import useAsync from "../customHook/useAsync";
-import {useParams} from 'react-router-dom';
 import { API_URL } from "../config/contansts";
 
 
 const Products = () => {
-  let {category} = useParams();
-  console.log("category: ",category);
-  
+  // let {category} = useParams();
+  // console.log("category: ",category);
+
   const getProducts = async () => {
-    const endpoint = category ? `/products/${category}` : '/products';
+    const endpoint = '/products';
     try {
       const res = await axios.get(`${API_URL}${endpoint}`);
       console.log(`res(${endpoint}): `, res.data);
@@ -28,8 +27,6 @@ const Products = () => {
   if(loading) return <div>로딩중 ......</div>
   if(error) return <div>에러가 발생했습니다.</div>
   if(!products){
-    console.log("state: ", state);
-    console.log("products: ",products);
     return <div>로딩중입니다.</div>
   }  
 
