@@ -21,15 +21,19 @@ const DetailProd = () => {
         const userId = getCookie('login');
         const prodNum = state.detailProduct.prodNum; 
         const quantity = number;
-        // console.log('타입확인',typeof(prodNum));
-        // console.log('타입확인',typeof(quantity));
-        await axios.post('/cart', { userId, prodNum, quantity })
-        .then(() => {
-            console.log("장바구니 넣기 성공!");
-        })
-        .catch(err => {
-            console.error(err);
-        })
+
+        if(userId){ //로그인 했을때만 작동하게
+            await axios.post('/cart', { userId, prodNum, quantity })
+            .then(() => {
+                alert("장바구니에 추가했습니다.")
+            })
+            .catch(err => {
+                console.error(err);
+            })
+        }else{
+            alert('로그인해주세요!');
+            return;
+        }
     }
     return (
         
