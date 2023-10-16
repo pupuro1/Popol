@@ -9,7 +9,7 @@ import { API_URL } from "../config/contansts";
 const Products = () => {
   let {category} = useParams();
   console.log("category: ",category);
-  
+
   const getProducts = async () => {
     const endpoint = category ? `/products/${category}` : '/products';
     try {
@@ -37,7 +37,9 @@ const Products = () => {
   return(
     <>
       <h2>상품 목록</h2>
-      {products.map(product => <Product key = {product.id} product={product} />)}
+      <div id="products">
+        {products.map(product => <Product key = {product.id} product={product} />)}
+      </div>
     </>
   )
 }
