@@ -17,7 +17,7 @@ const Footer = () => {
      </section>
      <div class="footer2">
       <div class="footer2-1">
-      <a href="#"><span>회사소개</span></a>
+      <a href="#"><span>회사sdfasdfas소개</span></a>
       <a href="#"><span>개인정보처리방침</span></a>
       <a href="#"><span>이용약관</span></a>
       <a href="#"><span>청소년 보호방침</span></a>

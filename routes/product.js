@@ -28,7 +28,7 @@ router.route('/')
         content: req.body.content
       })
       console.log(product);
-      res.status(201).json(product);
+      res.status(201).end();
     } catch (error) {
       console.error(error);
       next(error);

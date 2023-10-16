@@ -1,7 +1,6 @@
 .cart1{
   width: 1000px;
-  height: 650px;
-  
+  height: 750px;
 }
 .jang{
   padding-top: 50px;
@@ -39,9 +38,12 @@
 
 .cart4{
   width: 300px;
-  height: 450px;
+  height: 500px;
   float: right;
   line-height: 2;
+  border: 1px solid #EEEEEE;
+  position: sticky;
+  top: 200px;
   
 }
 .cart4 dd{
@@ -87,45 +89,64 @@
 }
 
 .apple{
-  
   width: 650px;
-  height: 500px;
+  height: 600px;
   float: left;
+  overflow: auto;
+
   
 }
-.apple1{
+.apple::-webkit-scrollbar {
+  display: none;
+
+}
+.apple1, .choco{
   float: left;
   width: 640px;
   height: 150px;  
   line-height: 2;
   border: 1px solid #ccc;
-
+  
 }
-.apple1 a{
+.apple1 a ,.choco a{
   font-size: 15px;
 }
-.apple1 a:hover{
+.apple1 a:hover, .choco a:hover{
   text-decoration: underline;
 }
-.apple1 p{
+.apple1 p, .choco p{
   font-size: 20px;
-  border-top: 1px solid #ccc;
 }
-.apple1 button{
+.apple1 button,.choco button{
   width: 120px;
   background-color: #FF3E3E;
   color: white;
   border-color: #FF3E3E;
   float: right;
-  margin-top: -50px;
+  margin-top: -70px;
   margin-right: 50px;
   
 }
-.apple1 button:hover{
+.apple1 button:hover, .choco button:hover{
   background-color: #222222;
   border-color: #222222;
 }
+.apple1 span, .choco span{
+  float: right;
+  margin-right: 50px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  height: 25px;
+  background-color: #FFFFFF;
+  width: 118px;
+  text-align: center;
+  margin-top: -20px;
+}
+.apple1 span:hover, .choco span:hover{
+  background-color: #222222;
+  color: white;
 
+}
 #img-a{
   background-image: url(/img/aaa.jpg);
   width: 150px;
@@ -134,4 +155,24 @@
   background-position: center; 
   margin-right: 20px;
   float: left;
+}
+
+.choco{
+  margin-top: 30px;
+}
+
+#img-b{
+  background-image: url(/img/bbb.jpg);
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center; 
+  margin-right: 20px;
+  float: left;
+}
+
+
+#ap{
+  height: 50px;
+  background-color: #FFD040;
 }

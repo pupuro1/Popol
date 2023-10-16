@@ -31,8 +31,8 @@ function reducer(state, action){
     }
 }
 
-function useAsync(callback, deps=[]) {
-    // console.log("useAsync진입: ",callback);
+function useAsync(callback, deps = []) {
+    console.log("useAsync진입: ", deps);
     const [state, dispatch] = useReducer(reducer, initialState);
     const fetchDate = async () => {
         dispatch({type: "LOADING"});

@@ -10,16 +10,19 @@ const Products = () => {
   let {category} = useParams();
   console.log("category: ",category);
   
-  const getProducts = !category ? async () => {
-    const res = await axios.get(`/products`);
-    console.log('res(/products): ',res.data);
-    return res.data;
-  } : async () => {
-    const res = await axios.get(`/products/${category}`);
-    console.log(`res(/products/${category}): `,res.data);
-    return res.data;
+  const getProducts = async () => {
+    const endpoint = category ? `/products/${category}` : '/products';
+    try {
+      const res = await axios.get(`${API_URL}${endpoint}`);
+      console.log(`res(${endpoint}): `, res.data);
+      return res.data;
+    } catch (error) {
+      console.error("API Error: ", error);
+      throw error;
+    }
   }
   
+  // const [state ] = useAsync(getProducts, []);
   const [state ] = useAsync(getProducts, []);
   const { loading, data:products, error} = state; //state구조분해 
   if(loading) return <div>로딩중 ......</div>

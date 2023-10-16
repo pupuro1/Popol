@@ -79,6 +79,7 @@ app.post('/image', upload.single('image'), (req, res)=>{
 app.use('/user', userRouter);
 app.use('/products', productRouter);
 app.use('/login', loginRouter);
+app.use('/cart', cartRouter);
 // app.use('/category', categoryRouter);
 
 
