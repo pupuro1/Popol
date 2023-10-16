@@ -37,7 +37,9 @@ const Products = () => {
   return(
     <>
       <h2>상품 목록</h2>
-      {products.map(product => <Product key = {product.id} product={product} />)}
+      <div id="products-list">
+        {products.map(product => <Product key = {product.id} product={product} />)}
+      </div>
     </>
   )
 }
