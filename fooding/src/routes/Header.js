@@ -38,8 +38,8 @@ const Header = () => {
         // 로그인 하기 전
         :
         <div id="header-top">
-          <p>{user}</p>
-          <button onClick={Logout}>로그아웃</button>
+          <NavLink id="user-name">{user}</NavLink>
+          <NavLink id="logout-btn" onClick={Logout}>로그아웃</NavLink>
         </div>
         //로그인 후
         }
