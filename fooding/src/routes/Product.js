@@ -44,7 +44,7 @@ const Product = ( {product} ) => {
                         </div>
                         <div className='prd-contents'>
                             <span className='prd-name'>{product.name}</span>
-                            <span className='prd-price'>{product.price}</span>
+                            <span className='prd-price'>{product.price}</span><span>원</span>
                         </div>
                     </NavLink>
                 </div>

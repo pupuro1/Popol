@@ -1,13 +1,11 @@
 .prd-out{
     width: 260px;
 }
-
 .prd-img-box{
-    border: 1px solid red;
+    border: 1px solid white;
     width: 200px;
     height: 200px;
     display: block;
-
 }
 .prd-img{
     width: 100%;
@@ -19,8 +17,17 @@
     display: block;
 }
 .prd-name{
-    width: 100px;
-    height: 40px;
+    height: 20px;
+    display: block;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .prd-price{
     width: 100px;
@@ -28,7 +35,8 @@
 }
 
 .prd-out a{
-    width: 250px;
-    height: 250px;
     border: 1px solid #000;
+    height: 250px;
+    width: 250px;
+    border: 0px;
 }

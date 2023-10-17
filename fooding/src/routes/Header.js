@@ -122,18 +122,11 @@ const Header = () => {
                     <td><NavLink>새우/해산물</NavLink></td>
                     <td><NavLink>오징어/낙지/초밥용</NavLink></td>
                   </tr>
-                  {/* <tr>
-                    <td><NavLink>날치알/명란알/알류</NavLink></td>
-                    <td><NavLink>멸치/어포/건어물</NavLink></td>
-                    <td><NavLink>미역/다시마/파래</NavLink></td>
-                  </tr> */}
                 </tbody>
               </table>
             </div>
           </li>
         </ul>
-
-
       </div>
     </>
   )
