@@ -5,6 +5,7 @@ const Employee = require('./employee');
 const Cart = require('./cart');
 const Order = require('./order');
 const OrderDetail = require('./orderDetail');
+// const CartView =  require('../migrations/20231016053437-cartView');
 
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config')[env];
@@ -35,5 +36,6 @@ Employee.associate(db);
 Cart.associate(db);
 Order.associate(db);
 OrderDetail.associate(db);
+
 
 module.exports = db;
