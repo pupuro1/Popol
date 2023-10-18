@@ -3,6 +3,7 @@ import axios from 'axios';
 import Product from "./Product";
 import useAsync from "../customHook/useAsync";
 import { API_URL } from "../config/contansts";
+import '../scss/Products.scss'
 
 
 const Products = () => {

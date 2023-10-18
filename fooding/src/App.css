@@ -1,31 +1,8 @@
-/* @font-face {
-    font-family: 'SOYOMapleBoldTTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-body{
-    margin: 0 auto;
-    width: 1000px;
-    height: 1000px;
-    font-family: 'SOYOMapleBoldTTF';
-} */
 a{
     text-decoration: none;
     color: #000;
 }
 ul{
     list-style: none;
-}
-
-#main{
-    border: 1px solid #000;
-}
-#m-container{
-    display: grid;
-    grid-template-columns: repeat(4,  minmax(100px, auto));
-    grid-template-rows: repeat(2,  minmax(200px, auto));
-    row-gap: 10px;
-    column-gap: 20px;
 }
 

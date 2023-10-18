@@ -62,19 +62,24 @@ const DetailProd = () => {
                                 <div id='sum'><span>원</span>  <em>{state.detailProduct.price*number}</em> <span>합계</span>  </div>
                             </div>
                         </div>
+<<<<<<< HEAD
+                        <div id="buy">
+                            <button onClick={addCart}>장바구니</button>
+                            <button>바로구매</button>
+                        </div>
+=======
                         <div>합계  {state.detailProduct.price*number} 원  </div>
                     </div>
 
                     <div id="buy">
                         <button onClick={addCart}>장바구니</button>
                         <button>바로구매</button>
+>>>>>>> 5de95c794f429056b64809fa6fa960659adeac48
                     </div>
                 </div>
-    
                 <div id='back'>
                     <NavLink to='/'>뒤로</NavLink>
                 </div>
-    
             </div>
         </div>
     );
