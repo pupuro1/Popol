@@ -94,14 +94,14 @@ shopping_cart_checkout
 			<dt><span>주문금액</span></dt>
 			<dd><em>{sumPrice}</em><span>원</span></dd>
 		</dl>
-		<dl>
+		{/* <dl>
 			<dt><span>상품할인</span></dt>
 			<dd>-<em>0</em><span>원</span></dd>
 			<dl>
 				<dt><span>배송비</span></dt>
 				<dd>+<em>0</em><span>원</span></dd>
 			</dl>
-		</dl>
+		</dl> */}
 		<div class="cart4-1">
 			<dl>
 				<dt><span>결제예정금액</span></dt>
