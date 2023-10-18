@@ -1,9 +1,16 @@
-import React from "react";
+import React , { useState } from "react";
 import '../scss/Cart.scss';
 import axios from "axios";
 import { API_URL } from '../config/contansts'
 
-const CartProd = ({cartProd}) => {
+const CartProd = ({ cartProd }) => {
+  const [number, setNumber] = useState(1);
+  const increase = () => {
+    setNumber(number + 1);
+  };
+  const decrease = () => {
+    setNumber(number - 1);
+  };
 
   console.log("cartProd: ", cartProd);
 
@@ -31,6 +38,11 @@ const CartProd = ({cartProd}) => {
       <a href="/cart" onClick={deleteCart}>
         <span class = "material-symbols-outlined" >close 삭제</span>
       </a>
+      <div class='apple1-1'> 
+            <button onClick={decrease}>-</button> 
+             <div><span>{number}</span></div>
+            <button onClick={increase}>+</button>
+        </div>
     </div>
   )
 }

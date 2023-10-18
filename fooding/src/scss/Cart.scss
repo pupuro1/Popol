@@ -38,12 +38,13 @@
 
 .cart4{
   width: 300px;
-  height: 500px;
+  height: 400px;
   float: right;
   line-height: 2;
   border: 1px solid #EEEEEE;
   position: sticky;
-  top: 200px;
+  top: 250px;
+  padding: 20px;
   
 }
 .cart4 dd{
@@ -93,7 +94,7 @@
   height: 600px;
   float: left;
   overflow: auto;
-
+  
   
 }
 .apple::-webkit-scrollbar {
@@ -106,6 +107,8 @@
   height: 150px;  
   line-height: 2;
   border: 1px solid #ccc;
+  margin-top: 20px;
+  position: relative;
   
 }
 .apple1 a ,.choco a{
@@ -117,7 +120,7 @@
 .apple1 p, .choco p{
   font-size: 20px;
 }
-.apple1 button,.choco button{
+.apple1 button:nth-child(4){
   width: 120px;
   background-color: #FF3E3E;
   color: white;
@@ -147,14 +150,43 @@
   color: white;
 
 }
+.apple1-1 {
+  height: 35px;
+  width: 100px;
+  display: flex;
+  position: absolute;
+  left: 170px;
+  bottom: 10px;
+  
+}
+.apple1-1 button{
+  width: 33px;
+  height: 33px;
+  border: 1px solid #d1d1d1;
+  background-color: white;
+  
+}
+.apple1-1 > div{
+  width: 40px;
+  text-align: center;
+  display: flex;
+  
+}
+.apple1-1 > div > span{
+  height: 31px;
+  margin: 0px auto ;
+  font-size: 17px;
+}
 #img-a{
   background-image: url(/img/aaa.jpg);
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
+  margin: 10px;
   background-size: cover;
   background-position: center; 
   margin-right: 20px;
   float: left;
+  
 }
 
 .choco{
@@ -173,6 +205,11 @@
 
 
 #ap{
+  width: 480px;
+  margin-left: 160px;
   height: 50px;
   background-color: #FFD040;
+}
+#ap a{
+  margin-left: 10px;
 }

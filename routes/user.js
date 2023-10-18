@@ -23,5 +23,21 @@ router.route('/').post(async(req,res,next)=>{
     
   }
 })
+router.route('/mypage')
+.get(async (req,res,next)=>{
+  try {
+    // console.log("res",req.query);
+    
+    const userData = await User.findOne({
+      where: {
+        id : req.query.user
+      }
+    })
+    console.log('userData',userData);
+    res.status(201).json(userData)
+  } catch (error) {
+    console.error(error);
+  }
+})
 
 module.exports = router;
