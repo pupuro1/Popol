@@ -1,14 +1,19 @@
+
+// 전체 박스
 .cart1{
-  width: 1000px;
+  width: 1050px;
   height: 750px;
 }
 .jang{
   padding-top: 50px;
 }
+// 장바구니 비어있을때
 .cart2{
   width: 700px;
   height: 450px;
   float: left;
+  overflow: auto;
+  
 }
 .cart2 span{
   font-size: 100px;
@@ -35,7 +40,7 @@
 .cart3 p{
   text-align: center;
 }
-
+// 전체상품 박스
 .cart4{
   width: 300px;
   height: 400px;
@@ -89,18 +94,20 @@
   background-color: #222222;
 }
 
+
+// 두번째 박스
 .apple{
-  width: 650px;
+  width: 680px;
   height: 600px;
   float: left;
   overflow: auto;
-  
-  
 }
 .apple::-webkit-scrollbar {
-  display: none;
+  // display: none;
+  // 스크롤 가리기
 
 }
+// (CartProd.js) apple안에 박스
 .apple1, .choco{
   float: left;
   width: 640px;
@@ -150,6 +157,17 @@
   color: white;
 
 }
+// apple1 색
+#ap{
+  width: 490px;
+  margin-left: 150px;
+  height: 50px;
+  background-color: #FFD040;
+}
+#ap a{
+  margin-left: 10px;
+}
+// - 0 + 버튼 사용 x
 .apple1-1 {
   height: 35px;
   width: 100px;
@@ -204,12 +222,3 @@
 }
 
 
-#ap{
-  width: 480px;
-  margin-left: 160px;
-  height: 50px;
-  background-color: #FFD040;
-}
-#ap a{
-  margin-left: 10px;
-}

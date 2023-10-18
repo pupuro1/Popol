@@ -35,6 +35,8 @@ body{
 .obtion{
     position: absolute;
 }
+
+// 첫번째 박스
 section{
 height: 47px;
 background-color: #F2F2F2;
@@ -43,7 +45,7 @@ border-bottom: 1px solid;
 border-color: #BDBDBD;
 
 }
-
+//첫번째박스 글
 .footer1 ul {
 padding: 0;
 
@@ -67,6 +69,7 @@ text-decoration-color: blue;
 border-right: none;
 }
 
+// 두번째박스
 .footer2{
 position: relative;
 width: 1000px;
@@ -105,6 +108,7 @@ color: red;
 text-decoration-color: black;
 
 }
+// 세번째박스
 .footer3{
     width: 1000px;
 }
