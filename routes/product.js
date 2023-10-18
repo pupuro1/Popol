@@ -64,9 +64,9 @@ router.route('/')
         where: {
           name: {
             [Op.substring]: `%${req.query.search}%`
-          }
-        }
-      })
+          },
+        },
+      });
       // console.log("searchData: ",searchData);
       res.json(searchData)
     } catch (error) {
@@ -79,8 +79,10 @@ router.route('/')
     try {
       const detailProd = await Product.findAll({
         where: {
-          kind: req.params.category,
-        }
+          kind: {
+            [Op.like]: `${req.params.category}%`
+          },
+        },
       });
       // console.log("dataValues: ", detailProd.dataValues); 
       // res.json(detailProd.dataValues);

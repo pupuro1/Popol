@@ -82,31 +82,31 @@ const Header = () => {
 
           <div id="dropdown">
                 <ul>
-                    <li><a href="">사과/배</a></li>
-                    <li><a href="">감귤/만감류</a></li>
-                    <li><a href="">수박</a></li>
-                    <li><a href="">냉동/간편과일</a></li>
+                    <li><NavLink to='/products/1-1'>사과/배</NavLink></li>
+                    <li><NavLink to='/products/1-2'>감귤/만감류</NavLink></li>
+                    <li><NavLink to='/products/1-3'>수박</NavLink></li>
+                    <li><NavLink to='/products/1-4'>냉동/간편과일</NavLink></li>
                 </ul>
                 <ul>
-                    <li><a href="">국내쌀/수입쌀</a></li>
-                    <li><a href="">잡곡</a></li>
-                    <li><a href="">견과류</a></li>
+                    <li><NavLink to='/products/2-1'>신선야채</NavLink></li>
+                    <li><NavLink to='/products/2-2'>냉동야채</NavLink></li>
+                    <li><NavLink to='/products/2-3'>건조야채</NavLink></li>
                 </ul>
                 <ul>
-                    <li><a href="">신선야채</a></li>
-                    <li><a href="">냉동야채</a></li>
-                    <li><a href="">건조야채</a></li>
+                    <li><NavLink to='/products/3-1'>국내쌀/수입쌀</NavLink></li>
+                    <li><NavLink to='/products/3-2'>잡곡</NavLink></li>
+                    <li><NavLink to='/products/3-3'>견과류</NavLink></li>
                 </ul>
                 <ul>
-                    <li><a href="">생고기</a></li>
-                    <li><a href="">양념육</a></li>
-                    <li><a href="">알류</a></li>
+                    <li><NavLink to='/products/4-1'>생고기</NavLink></li>
+                    <li><NavLink to='/products/4-2'>양념육</NavLink></li>
+                    <li><NavLink to='/products/4-3'>알류</NavLink></li>
                 </ul>
                 <ul>
-                    <li><a href="">생선류</a></li>
-                    <li><a href="">조개류</a></li>
-                    <li><a href="">새우</a></li>
-                    <li><a href="">오징어/낙지</a></li>
+                    <li><NavLink to='/products/5-1'>생선류</NavLink></li>
+                    <li><NavLink to='/products/5-2'>조개류</NavLink></li>
+                    <li><NavLink to='/products/5-3'>새우</NavLink></li>
+                    <li><NavLink to='/products/5-4'>오징어/낙지</NavLink></li>
                 </ul>
           </div>
 
