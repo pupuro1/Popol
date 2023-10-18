@@ -1,0 +1,11 @@
+김지환: 백엔드, 프론트엔드
+  시퀄라이즈 적용: ./models/*
+  express서버: ./server.js
+
+
+조경익: 백엔드, 프론트엔드
+유재혁: 프론트엔드, css
+        header.js css,
+        DetailProd.js css,
+        Products.css 
+박승균: css 

@@ -3,7 +3,6 @@ import { Form, Divider, Input, InputNumber, Button, Upload, Select } from 'antd'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../scss/upload.scss';
-// import 'antd/dist/antd.css';
 import { API_URL } from '../config/contansts'
 
 const { Option, OptGroup } = Select;
@@ -49,7 +48,7 @@ const AddProd = () => {
         })
     }
 
-  return(
+    return(
     <div id="upload-container" className='inner'>
             <Form name="productUpload" onFinish={onSubmit}>
                 <Form.Item name="imgUpload"

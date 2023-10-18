@@ -52,10 +52,12 @@ const DetailProd = () => {
                             <span>상품 개수</span>
                             <div id='counter'>
                                 <div id='count-btn'> 
+                                    {/* 상품개수 증감버튼 */}
                                     <button onClick={decrease}>-</button> 
                                     <div><span>{number}</span></div>
                                     <button onClick={increase}>+</button>
                                 </div>
+                                {/* 상품1개의 가격과 사용자가 지정한 개수를 곱하여 총합계를 나타냄 */}
                                 <div id='sum'><span>원</span>  <em>{state.detailProduct.price*number}</em> <span>합계</span>  </div>
                             </div>
                         </div>

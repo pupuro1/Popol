@@ -1,21 +1,28 @@
 #mypage {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 #mypage fieldset{
-    width: 500px;
+    width: 400px;
     margin: auto;
 }
-
 #mypage ul{
     list-style-type: none;
-    /* border: 1px solid #000; */
 }
 #mypage li{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgba($color: #000000, $alpha:0.1);
     padding: 10px;
 }
-#mypage a{
+#my-face-box{
+    height: 170px;
+}
+#my-face{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: block;
+}
+#mypage a{//상품등록하기 버튼크기, 색지정
     text-decoration: none;
     color: #000;
     border: 1px solid #000;
@@ -26,7 +33,6 @@
     font-weight: 800;
 }
 #mypage span{
-
     width: 100px;
     display: inline-block;
 }
