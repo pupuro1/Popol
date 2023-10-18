@@ -38,11 +38,11 @@ const CartProd = ({ cartProd }) => {
       <a href="/cart" onClick={deleteCart}>
         <span class = "material-symbols-outlined" >close 삭제</span>
       </a>
-      <div class='apple1-1'> 
-            <button onClick={decrease}>-</button> 
+      {/* <div class='apple1-1'> 
+            <button onClick={decrease}>-</button>
              <div><span>{number}</span></div>
             <button onClick={increase}>+</button>
-        </div>
+        </div> */}
     </div>
   )
 }
