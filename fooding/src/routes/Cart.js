@@ -1,6 +1,5 @@
 import React from 'react';
 import '../scss/Cart.scss';
-import useAsync from "../customHook/useAsync";
 import axios from 'axios';
 import { getCookie } from '../cookie';
 import CartProd from './CartProd';
@@ -25,13 +24,6 @@ const Cart = () => {
 	let sumPrice = 0;
 	cartProds.map(cartProd => sumPrice = sumPrice + (cartProd.quantity * cartProd.Product.price));
 	console.log("sumPrice: ", sumPrice);
-	// const [state ] = useAsync(getCart, counter);
-  // const { loading, data:cartProds, error} = state; //state구조분해 
-  // if(loading) return <div>로딩중 ......</div>
-  // if(error) return <div>에러가 발생했습니다.</div>
-  // if(!cartProds){
-  //   return <div>로딩중입니다.</div>
-  // }  
 
   return(
     <>
@@ -40,46 +32,20 @@ const Cart = () => {
 					<h2>장바구니</h2>
 				</div>
 
-	{/* <div class="cart2">
-		<div class="cart3">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <span class="material-symbols-outlined">
-shopping_cart_checkout
-</span>
-		<p>
-			장바구니에 담긴 상품이 없습니다.	
-		</p>
-		<button>로그인</button>
-		</div>
-	</div> */}
-				
 				<div class="apple">
 					<h3>택배배송 상품:{cartProds.length}개</h3>
-
-					{cartProds.map(cartProd => <CartProd key={cartProd.cartNum} cartProd={cartProd}></CartProd>)}
-					
-					{/* <div class="apple1">
-						<div id='img-a'></div>
-							< div id="ap">< a href = '' > [택배배송] SSG 프리미엄 감홍사과 3 kg </a></div >
-							<p>6980원 1개</p>
-						<button>바로 구매</button>
-						< link rel = "stylesheet"
-							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-						<a href=""><span class = "material-symbols-outlined" >
-							close 삭제</span></a>
-					</div> */}
-
-					{/* <div class="choco">
-						< div id='img-b'></div>
-						< div id="ap">< a href = '' > [택배배송] SSG 프리미엄 감홍사과 3 kg </a></div>
-						<p> 18200 원 1 개 </p>
-						<button > 바로 구매 </button>
-						<link rel="stylesheet"
-							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /><a href="" >
-							<span class="material-symbols-outlined">
-							close 삭제 </span></a >
-				</div>*/}
-
+					{
+						cartProds!='' ? 
+							cartProds.map(cartProd => <CartProd key={cartProd.cartNum} cartProd={cartProd}></CartProd>) 
+							: 
+							<div class="cart2">
+								<div class="cart3">
+									<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+									<span class="material-symbols-outlined">shopping_cart_checkout</span>
+									<p>장바구니에 담긴 상품이 없습니다.</p>
+								</div>
+							</div>
+					}
 				</div>
 				
 				

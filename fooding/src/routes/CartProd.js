@@ -23,7 +23,7 @@ const CartProd = ({cartProd}) => {
   return(
     <div class="apple1">
       <img id='img-a' src={cartProd.Product.imageUrl} alt="" />
-        < div id="ap">< a href = '' > [택배배송] {cartProd.Product.name}</a></div >
+        < div id="ap">[택배배송] {cartProd.Product.name}</div >
         <p>{cartProd.quantity * cartProd.Product.price}원 {cartProd.quantity}개</p>
       <button>바로 구매</button>
       < link rel = "stylesheet"

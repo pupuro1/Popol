@@ -14,6 +14,7 @@ const Category = () => {
     console.log('res: ',res.data);
     return res.data;
   }
+  
   const [state ] = useAsync(getProducts, category);
   const { loading, data:products, error} = state; //state구조분해 
   if(loading) return <div>로딩중 ......</div>
