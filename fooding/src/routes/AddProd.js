@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Form, Divider, Input, InputNumber, Button, Upload, Select, Space } from 'antd';
+import { Form, Divider, Input, InputNumber, Button, Upload, Select } from 'antd';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../scss/upload.scss';
 // import 'antd/dist/antd.css';
 import { API_URL } from '../config/contansts'
+
+const { Option, OptGroup } = Select;
 
 const AddProd = () => {
     const navigate = useNavigate();
@@ -73,36 +75,36 @@ const AddProd = () => {
                 </Form.Item>
                 <Divider/>
                 <Form.Item name="kind" label={<div className='upload-label'>카테고리</div>}>
-                    <Select name="kind"
-                        defaultValue="상품 카테고리를 선택해주세요"
-                        style={{
-                            width: 120,
-                        }}
-                        options={[
-                            {
-                            value: '1',
-                            label: '과일',
-                            },
-                            {
-                            value: '2',
-                            label: '채소',
-                            },
-                            {
-                            value: '3',
-                            label: '쌀/잡곡',
-                            },
-                            {
-                            value: '4',
-                            label: '육류/계란류',
-                            // disabled: true,
-                            },
-                            {
-                            value: '5',
-                            label: '수산물',
-                            // disabled: true,
-                            },
-                        ]}
-                    />
+                    <Select name="kind"defaultValue="상품 카테고리를 선택해주세요"style={{width: 120}}>
+                        <OptGroup label="과일">
+                            <Option value="1-1">사과/배</Option>
+                            <Option value="1-2">감귤/만감류</Option>
+                            <Option value="1-3">수박/멜론</Option>
+                            <Option value="1-4">냉동/간편과일</Option>
+                            <Option value="1-5">기타과일</Option>
+                        </OptGroup>
+                        <OptGroup label="채소">
+                            <Option value="2-1">신선야채</Option>
+                            <Option value="2-2">냉동야채</Option>
+                            <Option value="2-3">건조야채</Option>
+                        </OptGroup>
+                        <OptGroup label="쌀/잡곡">
+                            <Option value="3-1">국내쌀/수입쌀</Option>
+                            <Option value="3-2">잡곡</Option>
+                            <Option value="3-3">견과류</Option>
+                        </OptGroup>
+                        <OptGroup label="육류/계란류">
+                            <Option value="4-1">생고기</Option>
+                            <Option value="4-2">양념육</Option>
+                            <Option value="4-3">알류</Option>
+                        </OptGroup>
+                        <OptGroup label="수산물">
+                            <Option value="5-1">생선류</Option>
+                            <Option value="5-2">조개류</Option>
+                            <Option value="5-3">새우/해산물</Option>
+                            <Option value="5-4">오징어/낙지/초밥용</Option>
+                        </OptGroup>
+                    </Select>
                 </Form.Item>
                 <Divider/>
                 <Form.Item name="price"

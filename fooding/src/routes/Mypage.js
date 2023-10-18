@@ -46,9 +46,10 @@ const Mypage = () => {
           <td>{user_birth}</td>
         </tr>
         <tr>
-          <td>전화번호</td
-          ><td>{user_phone}</td>
+          <td>전화번호</td>
+          <td>{user_phone}</td>
         </tr>
+        <a href="/add_prod">상품등록하기</a>
       </fieldset>
     </div>
   )
