@@ -61,7 +61,8 @@ shopping_cart_checkout
 					{/* <div class="apple1">
 						<div id='img-a'></div>
 							< div id="ap">< a href = '' > [택배배송] SSG 프리미엄 감홍사과 3 kg </a></div >
-							<p>6980원 1개</p>
+						<p>6980원 1개</p>
+				
 						<button>바로 구매</button>
 						< link rel = "stylesheet"
 							href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -82,8 +83,6 @@ shopping_cart_checkout
 
 				</div>
 				
-				
-				
 			
 			<div class="cart4">
 		< link rel = "stylesheet"
@@ -95,14 +94,14 @@ shopping_cart_checkout
 			<dt><span>주문금액</span></dt>
 			<dd><em>{sumPrice}</em><span>원</span></dd>
 		</dl>
-		<dl>
+		{/* <dl>
 			<dt><span>상품할인</span></dt>
 			<dd>-<em>0</em><span>원</span></dd>
 			<dl>
 				<dt><span>배송비</span></dt>
 				<dd>+<em>0</em><span>원</span></dd>
 			</dl>
-		</dl>
+		</dl> */}
 		<div class="cart4-1">
 			<dl>
 				<dt><span>결제예정금액</span></dt>
@@ -114,9 +113,12 @@ shopping_cart_checkout
 		</div>
 			</div>
 				
-</div>
+			</div>
+			
+			
     </> 
   )
 }
+
 
 export default Cart; 
