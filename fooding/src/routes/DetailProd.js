@@ -37,15 +37,12 @@ const DetailProd = () => {
         }
     }
     return (
-        
         <div>
             <div className="product-card">
                 <div id='product-container'>
-    
                     <div className='product-img-box'>
                         <img className='product_img'src={state.detailProduct.imageUrl} alt="" />
                     </div>
-    
                     <div className='product-contents'>
                         <h3 className='product-name'> {state.detailProduct.name}</h3>
                         <h2 className='product-price'>  <em>{state.detailProduct.price}</em> <span>원</span> </h2>

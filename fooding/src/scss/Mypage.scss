@@ -1,0 +1,32 @@
+#mypage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#mypage fieldset{
+    width: 500px;
+    margin: auto;
+}
+
+#mypage ul{
+    list-style-type: none;
+    /* border: 1px solid #000; */
+}
+#mypage li{
+    border-bottom: 1px solid #000;
+    padding: 10px;
+}
+#mypage a{
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    margin: auto;
+    display: block;
+    width: 100px;
+    font-weight: 800;
+}
+#mypage span{
+
+    width: 100px;
+    display: inline-block;
+}
