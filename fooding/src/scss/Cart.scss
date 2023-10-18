@@ -1,7 +1,7 @@
 
 // 전체 박스
 .cart1{
-  width: 1010px;
+  width: 1050px;
   height: 750px;
 }
 .jang{
@@ -12,6 +12,8 @@
   width: 700px;
   height: 450px;
   float: left;
+  overflow: auto;
+  
 }
 .cart2 span{
   font-size: 100px;
@@ -95,7 +97,7 @@
 
 // 두번째 박스
 .apple{
-  width: 660px;
+  width: 680px;
   height: 600px;
   float: left;
   overflow: auto;
@@ -165,7 +167,7 @@
 #ap a{
   margin-left: 10px;
 }
-// - 0 + 버튼
+// - 0 + 버튼 사용 x
 .apple1-1 {
   height: 35px;
   width: 100px;
