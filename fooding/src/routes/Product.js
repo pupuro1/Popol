@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom'
 import axios from 'axios';
 import useAsync from "../customHook/useAsync";
 import '../scss/product.scss'
+import { API_URL } from '../config/contansts';
 
 const Product = ( {product} ) => {
 
     const id = product.prodNum;
     const getDetailProducts = async () => {
-        const res = await axios.get(`/products/all/${id}`);
-        console.log('res: ',res);
+        const res = await axios.get(`${API_URL}/products/all/${id}`);
         console.log('res.data: ',res.data);
         return res.data;
     }
@@ -19,8 +19,6 @@ const Product = ( {product} ) => {
     if(loading) return <div>로딩중 ......</div>
     if(error) return <div>에러가 발생했습니다.</div>
     if(!detailProduct){
-        console.log("state: ", state);
-        console.log("detailProduct: ",detailProduct);
         return <div>로딩중입니다.</div>
     }  
 

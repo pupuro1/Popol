@@ -3,6 +3,7 @@ import { NavLink, useLocation  } from 'react-router-dom'
 import axios from 'axios';
 import '../scss/detailProd.scss'
 import { getCookie } from '../cookie';
+import { API_URL } from '../config/contansts'
 
 const DetailProd = () => { 
     const location = useLocation();
@@ -21,15 +22,19 @@ const DetailProd = () => {
         const userId = getCookie('login');
         const prodNum = state.detailProduct.prodNum; 
         const quantity = number;
-        // console.log('타입확인',typeof(prodNum));
-        // console.log('타입확인',typeof(quantity));
-        await axios.post('/cart', { userId, prodNum, quantity })
-        .then(() => {
-            console.log("장바구니 넣기 성공!");
-        })
-        .catch(err => {
-            console.error(err);
-        })
+
+        if(userId){ //로그인 했을때만 작동하게
+            await axios.post(`${API_URL}/cart`, { userId, prodNum, quantity })
+            .then(() => {
+                alert("장바구니에 추가했습니다.")
+            })
+            .catch(err => {
+                console.error(err);
+            })
+        }else{
+            alert('로그인해주세요!');
+            return;
+        }
     }
     return (
         
@@ -57,10 +62,19 @@ const DetailProd = () => {
                                 <div id='sum'><span>원</span>  <em>{state.detailProduct.price*number}</em> <span>합계</span>  </div>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div id="buy">
                             <button onClick={addCart}>장바구니</button>
                             <button>바로구매</button>
                         </div>
+=======
+                        <div>합계  {state.detailProduct.price*number} 원  </div>
+                    </div>
+
+                    <div id="buy">
+                        <button onClick={addCart}>장바구니</button>
+                        <button>바로구매</button>
+>>>>>>> 5de95c794f429056b64809fa6fa960659adeac48
                     </div>
                 </div>
                 <div id='back'>

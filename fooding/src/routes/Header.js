@@ -13,7 +13,7 @@ const Header = () => {
   console.log('user Log',user);
   const Ck_Cookie = ()=>{
     if (getCookie('login')) {
-      return navigate(`/mypage/${getCookie('login')}`)
+      return navigate(`/mypage`)
     }else{
       return alert('로그인을 해주세요');
       //로그인 페이지로 이동

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import '../scss/join.scss'
+import { API_URL } from '../config/contansts'
 
 
 const Join = () => {
@@ -14,7 +15,7 @@ const Join = () => {
     const birth = e.target.birth.value
     const phone = e.target.phone.value
     if (id,pwd,name,birth,phone != "") {
-      await axios.post('/user',{id, pwd, name, birth, phone})
+      await axios.post(`${API_URL}/user`,{id, pwd, name, birth, phone})
       .then(() => {
         navigate('/');
       })
