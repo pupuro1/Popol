@@ -48,7 +48,7 @@ const AddProd = () => {
         })
     }
 
-  return(
+    return(
     <div id="upload-container" className='inner'>
             <Form name="productUpload" onFinish={onSubmit}>
                 <Form.Item name="imgUpload"
