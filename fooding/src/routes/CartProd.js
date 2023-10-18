@@ -30,9 +30,8 @@ const CartProd = ({ cartProd }) => {
   return(
     <div class="apple1">
       <img id='img-a' src={cartProd.Product.imageUrl} alt="" />
-        < div id="ap">< a href = '' > [택배배송] {cartProd.Product.name}</a></div >
-      <p>{cartProd.quantity * cartProd.Product.price}원 {cartProd.quantity}개</p>
-       
+        < div id="ap">[택배배송] {cartProd.Product.name}</div >
+        <p>{cartProd.quantity * cartProd.Product.price}원 {cartProd.quantity}개</p>
       <button>바로 구매</button>
       < link rel = "stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />

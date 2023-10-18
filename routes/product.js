@@ -1,5 +1,6 @@
 const express = require('express');
 const Product = require('../models/product')
+const { Op } = require("sequelize");
 
 const router = express.Router();
 
@@ -53,6 +54,26 @@ router.route('/')
       next(err);
     }
   })
+
+  //검색 조회
+  router.route('/search')
+  .get(async (req,res,next) => {
+    try {
+      console.log("검색내용: ", req.query);
+      const searchData = await Product.findAll({
+        where: {
+          name: {
+            [Op.substring]: `%${req.query.search}%`
+          }
+        }
+      })
+      // console.log("searchData: ",searchData);
+      res.json(searchData)
+    } catch (error) {
+      console.error(error);
+    }
+  })
+
   router.route('/:category')
   .get(async (req,res,next)=>{
     try {

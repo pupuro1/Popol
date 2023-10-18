@@ -17,7 +17,7 @@ const Login = () => {
     axios.post(`${API_URL}/login`,{id,pwd})
     .then(()=>{
       setCookie('login',id,{
-         expires: new Date(Date.now() + setTime),
+          expires: new Date(Date.now() + setTime),
         });
       console.log('로그인');
       navigate('/');

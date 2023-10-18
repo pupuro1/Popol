@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs"; //장바구니
 import { BsFillPersonFill } from "react-icons/bs"; //my
@@ -23,6 +23,20 @@ const Header = () => {
     removeCookie('login');
     navigate('/');
   }
+  const search = async (e) => {
+    e.preventDefault()
+    // console.log("e.target: ", e.target.searchInput.value);
+    // const searchData = await axios.get(`${API_URL}/products/search?search=${e.target.searchInput.value}`);
+    // console.log("searchData: ", searchData);
+    navigate('/', {
+      state : {
+        searchData: e.target.searchInput.value,
+      },
+    });
+  };
+
+  
+
   return(
     <>
       <div className="background">
@@ -46,10 +60,11 @@ const Header = () => {
 
         <div id="header-middle">
           <NavLink to="/" id="logo">Fooding</NavLink>
-          <div id="search">
-            <input type="text" placeholder="검색창"></input>
-            <AiOutlineSearch size={22} id="search-icon"/>
-          </div>
+          <form id="search" onSubmit={search}>
+              <input id="searchInput" type="text" placeholder="검색창"></input>
+              <button id="searchBtn" type="submit"><AiOutlineSearch size={22} id="search-icon"/></button>
+              {/* <AiOutlineSearch size={22} id="search-icon"/> */}
+          </form>
 
           <ul id="header_navi">
             <li><a onClick={Ck_Cookie}> <BsFillPersonFill size={24} width={50} height={50} /> <span>My</span>  </a></li>
