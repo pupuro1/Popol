@@ -1,19 +1,17 @@
+/*
+작성자: 김지환
+수정일자: 2023-10-18
+내용: 장바구니 페이지에 나오는 상품하나하나의 컴포넌트들 
+*/
 import React , { useState } from "react";
 import '../scss/Cart.scss';
 import axios from "axios";
 import { API_URL } from '../config/contansts'
 
-const CartProd = ({ cartProd }) => {
-  const [number, setNumber] = useState(1);
-  const increase = () => {
-    setNumber(number + 1);
-  };
-  const decrease = () => {
-    setNumber(number - 1);
-  };
-
+const CartProd = ({ cartProd }) => { //cartProd는 Cart컴포넌트에서 map함수로 받아온 상품하나하나
   console.log("cartProd: ", cartProd);
 
+  //장바구니 삭제 함수(삭제버튼 누르면 작동)
   const deleteCart = async () => {
     await axios.delete(`${API_URL}/cart`, {
       data: {
@@ -38,11 +36,6 @@ const CartProd = ({ cartProd }) => {
       <a href="/cart" onClick={deleteCart}>
         <span class = "material-symbols-outlined" >close 삭제</span>
       </a>
-      {/* <div class='apple1-1'> 
-            <button onClick={decrease}>-</button>
-             <div><span>{number}</span></div>
-            <button onClick={increase}>+</button>
-        </div> */}
     </div>
   )
 }

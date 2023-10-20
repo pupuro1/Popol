@@ -1,28 +1,34 @@
+/*
+작성자: 김지환
+수정일자: 2023-10-18
+내용: 장바구니 페이지
+*/
 import React from 'react';
 import '../scss/Cart.scss';
 import axios from 'axios';
 import { getCookie } from '../cookie';
 import CartProd from './CartProd';
-import { useAsyncRetry } from 'react-use'
+import { useAsyncRetry } from 'react-use' // useAsyncRetry커스텀훅 사용
 import { API_URL } from '../config/contansts'
 
 
 const Cart = () => {
-	const user = getCookie('login');
+	const user = getCookie('login'); //쿠키값(id) user상수에 넣기
 
-	const getCart = async () => {
-		const res = await axios.get(`${API_URL}/cart?userId=${user}`);
-		return res.data;
+	//카트 목록 불러오는 함수
+	const getCart = async () => {  
+		const res = await axios.get(`${API_URL}/cart?userId=${user}`); // /cart경로로 userId=user 쿼리로 보내서 반환값 res상수에 넣음 
+		return res.data; //res.data 리턴
 	}
 
-	const state = useAsyncRetry(getCart);
-	const { loading, error, value: cartProds, retry } = state
-	if (loading) return <div>로딩중..</div>
-  if (error) return <div>Error Occured: {error.message}</div>
-  if (!cartProds) return <button onClick={retry}>불러오기</button>
+	const state = useAsyncRetry(getCart); // useAsyncRetry커스텀훅에 인자로 getCart함수 넣어서 반환값을 state상수에 넣음  
+	const { loading, error, value: cartProds, retry } = state //state를 loading,error,cartProds,retry로 구조분해
+	if (loading) return <div>로딩중..</div> //state 구조분해한 loading에 값이 true면 <div>로딩중..</div> 띄움
+  if (error) return <div>Error Occured: {error.message}</div> //state 구조분해한 error에 값이 true면 <div>Error Occured: {error.message}</div> 띄움
+  if (!cartProds) return <button onClick={retry}>불러오기</button> //state 구조분해한 cartProds에 값이 false면 <button onClick={retry}>불러오기</button> 띄움
 
-	let sumPrice = 0;
-	cartProds.map(cartProd => sumPrice = sumPrice + (cartProd.quantity * cartProd.Product.price));
+	let sumPrice = 0; //장바구니 담긴 상품들 가격 합계인 sumPrice 변수 선언 
+	cartProds.map(cartProd => sumPrice = sumPrice + (cartProd.quantity * cartProd.Product.price)); //상품들 map함수로 반복시켜서 sumPrice에 가격합계 재할당
 	console.log("sumPrice: ", sumPrice);
 
   return(
@@ -34,8 +40,14 @@ const Cart = () => {
 
 				<div class="apple">
 					<h3>택배배송 상품:{cartProds.length}개</h3>
+					
+					{/*
+						삼항연산자 사용해서
+						카트에 상품이 있으면(cartProds에 뭔가 있으면) cartProds map함수 돌려서 CartProd 컴포넌트에 props로 cartProd 넣어서 생성
+						카트에 상품이 없으면(cartProds에 뭔가 없으면) 장바구니에 상품이 없습니다 표시
+					*/}
 					{
-						cartProds!='' ? 
+						cartProds != '' ?  
 							cartProds.map(cartProd => <CartProd key={cartProd.cartNum} cartProd={cartProd}></CartProd>) 
 							: 
 							<div class="cart2">

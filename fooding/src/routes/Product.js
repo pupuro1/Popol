@@ -1,3 +1,8 @@
+/*
+작성자: 김지환
+수정일자: 2023-10-18
+내용: 상품목록 페이지에서 map함수로 보여주는 상품하나하나 컴포넌트
+*/
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 import axios from 'axios';
@@ -6,8 +11,9 @@ import '../scss/product.scss'
 import { API_URL } from '../config/contansts';
 
 const Product = ( {product} ) => {
+    const id = product.prodNum; 
 
-    const id = product.prodNum;
+    //상품의 상세데이터 가져오는 함수  
     const getDetailProducts = async () => {
         const res = await axios.get(`${API_URL}/products/all/${id}`);
         console.log('res.data: ',res.data);
@@ -25,7 +31,8 @@ const Product = ( {product} ) => {
     return (
             <>
                 <div className="prd-out">
-                    <NavLink to={`/products/all/${id}`} state={{detailProduct: detailProduct}}>
+                    {/*상품 눌렀을떄 NavLink로 이동하면서 props로 그 제품의 상세데이터 넘겨줌*/}
+                    <NavLink to={`/products/all/${id}`} state={{detailProduct: detailProduct}}> 
                         <div className='prd-img-box'>
                             <img className='prd-img'src={product.imageUrl} alt="" />
                         </div>

@@ -54,7 +54,10 @@ class User extends Sequelize.Model {
   }
 
   static associate(db) {
+    //참조키로 Cart모델에 id(sourceKey)를 userId(foreignKey)라는 이름으로 보냄
     db.User.hasMany(db.Cart, { foreignKey: 'userId', sourceKey: 'id'});
+
+    //참조키로 Order모델에 id(sourceKey)를 userId(foreignKey)라는 이름으로 보냄
     db.User.hasMany(db.Order, { foreignKey: 'userId', sourceKey: 'id'});
   }
 };
