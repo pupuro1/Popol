@@ -1,3 +1,6 @@
+/*
+박승균:HTML 장바구니틀 제작
+*/
 import React from 'react';
 import '../scss/Cart.scss';
 import axios from 'axios';

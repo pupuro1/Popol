@@ -4,21 +4,26 @@
   width: 1050px;
   height: 750px;
 }
+//jang안에 h2 패딩주기
 .jang{
   padding-top: 50px;
 }
-// 장바구니 비어있을때
+
+// 장바구니 비어있을때 사용하는 박스
 .cart2{
   width: 700px;
   height: 450px;
   float: left;
   overflow: auto;
-  
 }
+
+//cart2 안에 span아이콘 사이즈조절, 위치조절
 .cart2 span{
   font-size: 100px;
   margin-left: 70px;
 }
+
+// cart3안에 span아이콘이랑 p글씨 가운데 이동, 넓이 조절, 위치조절
 .cart3{
   margin: auto;
   margin-top: 100px;
@@ -26,6 +31,7 @@
   width: 35%;
   height: 250px;
 }
+//cart3 안에 버튼
 .cart3 button{
  display: block;
  margin: auto;
@@ -33,14 +39,16 @@
  height: 50px;
  background-color: #F9F9F9;
 }
+//cart3 버튼에 마우스올렸을시 색변경
 .cart3 button:hover {
   background-color: #222222;
   color: white;
 }
+//cart3 p글씨 가운데로 이동
 .cart3 p{
   text-align: center;
 }
-// 전체상품 박스
+// 오른쪽의 전체상품 박스 
 .cart4{
   width: 300px;
   height: 400px;
@@ -50,19 +58,23 @@
   position: sticky;
   top: 250px;
   padding: 20px;
-  
 }
+
+//cart4 dd 오른쪽 넘기기
 .cart4 dd{
   float: right;
 }
+//cart4 결제 예정금액 ,주문하기, 선물하기 아래 박스 위치조절
 .cart4-1{
   border-top: 1px solid;
   margin-top: 40px;
   line-height: 1;
 }
+//cart4-1 dl 결제예정금액 색변경
 .cart4-1 dl{
   color: #FF3E3E;
 }
+//cart4-1 2번째 버튼 색변경, 크기조절, 위치조절
 .cart4-1 button:nth-child(2){
   background-color: #FF3E3E;
   border: 1px solid;
@@ -75,11 +87,12 @@
   margin-top: 40px;
   
 }
+//cart4-1 버튼 2번째 마우스올렸을시 색변경
 .cart4-1 button:nth-child(2):hover{
   background-color: #222222;
   border-color: #222222;
 }
-
+//cart4-1 버튼 4번째 색변경, 위치조절
 .cart4-1 button:nth-child(4){
   background-color: #FFFFFF;
   border: 1px solid #ccc;
@@ -89,6 +102,7 @@
   height: 35px;
   
 }
+//cart4-1 버튼 4번째 마우스올렸을시 색변경
 .cart4-1 button:nth-child(4):hover{
   color: white;
   background-color: #222222;
@@ -118,15 +132,19 @@
   position: relative;
   
 }
+//apple1의 a태그 사이즈조절
 .apple1 a ,.choco a{
   font-size: 15px;
 }
+// apple1 a태그 마우스 올리면 밑줄
 .apple1 a:hover, .choco a:hover{
   text-decoration: underline;
 }
+// apple1 p태그 사이즈조절
 .apple1 p, .choco p{
   font-size: 20px;
 }
+//.apple1 박스안에 4번째 버튼 크기조절, 색변경, 위치조절
 .apple1 button:nth-child(4){
   width: 120px;
   background-color: #FF3E3E;
@@ -137,10 +155,12 @@
   margin-right: 50px;
   
 }
+// apple1 버튼 마우스올렸을시 색변경
 .apple1 button:hover, .choco button:hover{
   background-color: #222222;
   border-color: #222222;
 }
+// apple1 스판태그 x모양 아이콘 위치조절, 사이즈 조절, 오른쪽밀기
 .apple1 span, .choco span{
   float: right;
   margin-right: 50px;
@@ -152,21 +172,24 @@
   text-align: center;
   margin-top: -20px;
 }
+//apple1 스판태그 마우스올리면 색변경
 .apple1 span:hover, .choco span:hover{
   background-color: #222222;
   color: white;
 
 }
-// apple1 색
+// apple1 위쪽 박스 크기조절 색변경
 #ap{
   width: 490px;
   margin-left: 150px;
   height: 50px;
   background-color: #FFD040;
 }
+//ap a태그 왼쪽밀기 
 #ap a{
   margin-left: 10px;
 }
+
 // - 0 + 버튼 사용 x
 .apple1-1 {
   height: 35px;
@@ -177,6 +200,7 @@
   bottom: 10px;
   
 }
+// - 0 + 버튼 사용 x
 .apple1-1 button{
   width: 33px;
   height: 33px;
@@ -184,17 +208,19 @@
   background-color: white;
   
 }
+// - 0 + 버튼 사용 x
 .apple1-1 > div{
   width: 40px;
   text-align: center;
   display: flex;
   
-}
+}// - 0 + 버튼 사용 x
 .apple1-1 > div > span{
   height: 31px;
   margin: 0px auto ;
   font-size: 17px;
 }
+// 장바구니에 물품 넣었을때 사진 위치 사용x
 #img-a{
   background-image: url(/img/aaa.jpg);
   width: 130px;
@@ -204,13 +230,12 @@
   background-position: center; 
   margin-right: 20px;
   float: left;
-  
 }
-
+//사용x
 .choco{
   margin-top: 30px;
 }
-
+// 사용x
 #img-b{
   background-image: url(/img/bbb.jpg);
   width: 150px;
