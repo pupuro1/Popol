@@ -1,4 +1,4 @@
-.product-card{
+.product-card{//상세페이지 전체크기
   width: 1000px;
   height: 800px;
   margin:  50px auto;
@@ -8,7 +8,7 @@
   height: 600px;
   display: flex;
 }
-.product-img-box{
+.product-img-box{//상품이미지크기지정
   width: 500px;
   height: 500px;
   float: left;
@@ -28,6 +28,7 @@
   padding-left: 30px;
 }
 .product-name{
+  //상품이름 2줄을 넘으면 ...표시
   width: 90%;
   font-size: 30px;
   margin-bottom: 10px;
@@ -42,13 +43,13 @@
   -webkit-line-clamp: 2 ;
   -webkit-box-orient: vertical;
 }
-@font-face {
+@font-face {//글씨체 지정
   font-family: 'TAEBAEKfont';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/TAEBAEKfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
-.product-price{
+.product-price{//가격 스타일지정
   min-width: 150px;
   max-width: 300px;
   font-family: 'TAEBAEKfont';
@@ -64,7 +65,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-left: 5px;
 }
-.product-explanation{
+.product-explanation{//상품상세정보칸 스타일
   display: inline-table;
   width: 90%;
   height: 120px;
@@ -107,7 +108,7 @@
   text-align: center;
   margin:auto;
 }
-#sum{
+#sum{//총합계 가격 스타일
   height: 30px;
   left: 50px;
   margin-top: 20px;

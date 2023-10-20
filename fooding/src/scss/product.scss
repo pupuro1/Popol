@@ -1,7 +1,7 @@
-.prd-out{
+.prd-out{//상품목록 1칸의 크기지정
     width: 260px;
 }
-.prd-img-box{
+.prd-img-box{//이미지 크기지정
     border: 1px solid white;
     width: 200px;
     height: 200px;
@@ -16,7 +16,7 @@
     height: 100px;
     display: block;
 }
-.prd-name{
+.prd-name{//상품이름이 칸을 넘었을때 ...으로 표시
     height: 20px;
     display: block;
     color: black;

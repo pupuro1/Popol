@@ -3,7 +3,8 @@ import axios from 'axios';
 import { getCookie } from "../cookie";
 import useAsync from "../customHook/useAsync";
 import { API_URL } from "../config/contansts";
-
+import '../scss/Mypage.scss';
+import { BsPersonCircle } from "react-icons/bs";
 const Mypage = () => {
   const user = getCookie('login');
   console.log(user);
@@ -27,31 +28,20 @@ const Mypage = () => {
   const user_birth = products.birth;
   const user_phone = products.phone;
   return(
-    <div>
-      <fieldset>
-        <legend>내 정보</legend> 
-        <tr>
-          이름{user_name}
-        </tr>
-        <tr>
-          <td>아이디</td>
-          <td>{user_id}</td>
-        </tr>
-        <tr>
-          <td>비밀번호</td>
-          <td>{user_pwd}</td>
-        </tr>
-        <tr>
-          <td>생년월일</td>
-          <td>{user_birth}</td>
-        </tr>
-        <tr>
-          <td>전화번호</td>
-          <td>{user_phone}</td>
-        </tr>
-        <a href="/add_prod">상품등록하기</a>
-      </fieldset>
-    </div>
+    <div id="mypage">
+        <fieldset>
+          <legend>내 정보</legend> 
+            <ul>
+              <li id="my-face-box"><BsPersonCircle id="my-face"/></li>
+              <li><span>이름</span>{user_name}</li>
+              <li><span>아이디</span>{user_id}</li>
+              <li><span>비밀번호</span>{user_pwd}</li>
+              <li><span>생년월일</span>{user_birth}</li>
+              <li><span>전화번호</span>{user_phone}</li>
+            </ul>
+          <a href="/add_prod">상품등록하기</a>
+        </fieldset>
+      </div>
   )
 }
 

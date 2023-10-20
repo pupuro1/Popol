@@ -23,10 +23,6 @@ body{
     float: right;
     margin-right: 10px;
 }
-#header-top a{
-    float: right;
-    margin-right: 10px;
-}
 #header-top #logout-btn{
     float: right;
 }
@@ -40,7 +36,7 @@ body{
     font-size: 30px;
     padding: 0 10px;
 }
-#header #search{
+#header #search{//검색창 스타일지정
     display: flex;    
     width: 280px;
     height: 22px;
@@ -97,49 +93,8 @@ body{
     border-radius: 10px 10px 0px 0px;
     padding-top: 7px;
 }
-#header-bottom li > a:hover{
+#header-bottom li > a:hover{//마우스를 올리면 색이변하는 효과
     background-color: #FFCF02;
-}
-#header table{
-    display: none;
-    position: absolute;
-    background-color: white;
-    border-collapse : collapse;
-    top: 115px;
-}
-#header table tr td{
-    width: 200px;
-    height: 30px;
-    border: 1px solid gray;
-}
-
-#header li:nth-child(1) table{
-    border-collapse : collapse;
-}
-#header li:nth-child(2) table{
-    border-collapse : collapse;
-    transform: translate(-19%, 0%);
-}
-#header li:nth-child(3) table{
-    border-collapse : collapse;
-    transform: translate(-38%, 0%);
-}
-#header li:nth-child(4) table{
-    border-collapse : collapse;
-    transform: translate(-56.5%, 0%);
-}
-#header li:nth-child(5) table{
-    border-collapse : collapse;
-    transform: translate(-75%, 0%);
-}
-#header table td:hover{
-    background-color: green;
-}
-#header table td:hover a{
-    color: white;
-}
-#header li:hover table{
-    display: block;
 }
 .bg-bottom{
     width: 100%;
@@ -152,14 +107,12 @@ body{
     border-top: 1px solid #FFCF02;
     box-shadow: 0px 15px 5px -15px;
 }
-
 #dropdown{
     display: flex;
     position: absolute;
     top: 115px;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
-    /* padding-bottom: 20px; */
     height: 0px;
     overflow: hidden;
     background-color: white;
@@ -174,21 +127,17 @@ body{
     list-style-type: none;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
-    /* padding-left: 10px; */
     width: 149px;
     height: 150px;
 }
-#dropdown div:nth-child(1) ul{
+#dropdown ul:nth-child(1){
     border-left: 0px;
 }
-#dropdown ul li a{
+#dropdown ul li a{//드롭다운메뉴에 글자중앙정렬
     text-align: center;
-
 }
-
-//1081
-
 #searchBtn{
     border: 0;
     background-color: #fff;
 }
+
