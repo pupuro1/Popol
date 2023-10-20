@@ -1,3 +1,8 @@
+/*
+작성자: 김지환
+수정일자: 2023-10-18
+내용: 상품 누르면 나오는 상세페이지
+*/
 import React, { useState } from 'react';
 import { NavLink, useLocation  } from 'react-router-dom'
 import axios from 'axios';
@@ -6,23 +11,13 @@ import { getCookie } from '../cookie';
 import { API_URL } from '../config/contansts'
 
 const DetailProd = () => { 
-    const location = useLocation();
-    const { state } = location;
-    console.log("state: ", state);
-    console.log("state.detailProduct: ", state.detailProduct);
+	const location = useLocation();
+	const { state } = location;
+	console.log("state: ", state);
+	console.log("state.detailProduct: ", state.detailProduct);
     
-    const [number, setNumber] = useState(1);
-    const increase = () => {
-        setNumber(number + 1);
-    };
-    const decrease = () => {
-        setNumber(number - 1);
-    };
-    const addCart = async () => {
-        const userId = getCookie('login');
-        const prodNum = state.detailProduct.prodNum; 
-        const quantity = number;
-
+	//몇게 구매할지 정하는 숫자변수
+	const [number, setNumber] = useState(1);
         if(userId){ //로그인 했을때만 작동하게
             await axios.post(`${API_URL}/cart`, { userId, prodNum, quantity })
             .then(() => {

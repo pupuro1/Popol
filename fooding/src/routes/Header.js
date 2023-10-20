@@ -1,3 +1,8 @@
+/*
+작성자: 김지환
+수정일자: 2023-10-18
+내용: 검색기능 구현 31줄 scarch()함수
+*/
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs"; //장바구니
@@ -22,11 +27,10 @@ const Header = () => {
     removeCookie('login');
     navigate('/');
   }
-  const search = async (e) => {
-    e.preventDefault()
-    // console.log("e.target: ", e.target.searchInput.value);
-    // const searchData = await axios.get(`${API_URL}/products/search?search=${e.target.searchInput.value}`);
-    // console.log("searchData: ", searchData);
+
+  //검색 기능 함수
+  const search = async (e) => { 
+    e.preventDefault() 
     navigate('/', {
       state : {
         searchData: e.target.searchInput.value,

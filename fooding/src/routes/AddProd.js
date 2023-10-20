@@ -1,14 +1,19 @@
-import React, { useState } from "react";
-import { Form, Divider, Input, InputNumber, Button, Upload, Select } from 'antd';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import '../scss/upload.scss';
-import { API_URL } from '../config/contansts'
+/*
+작성자: 김지환, 조경익
+수정일자: 2023-10-18
+내용: 상품등록 페이지
+*/
+import React, { useState } from "react"; 
+import { Form, Divider, Input, InputNumber, Button, Upload, Select } from 'antd'; //엔트디 사용
+import axios from 'axios'; // 서버에 요청 보낼려면 필요
+import { useNavigate } from 'react-router-dom'; // 주소 바꿀수 있는 훅 
+import '../scss/upload.scss'; // scss적용
+import { API_URL } from '../config/contansts' // http://localhost:8080
 
 const { Option, OptGroup } = Select;
 
 const AddProd = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
 
     // 이미지 경로 상태관리 추가
     const [imageUrl, setImageUrl ] = useState(null);
