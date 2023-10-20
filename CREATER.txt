@@ -1,6 +1,8 @@
 김지환: 백엔드, 프론트엔드
   시퀄라이즈 적용: ./models/*
   express서버: ./server.js
+  제품, 장바구니 미들웨어 작성: ./routes/product.js, 
+                              ./routes/cart.js
 
 조경익: 백엔드, 프론트엔드
 유재혁: 프론트엔드, css
