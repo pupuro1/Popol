@@ -1,3 +1,7 @@
+/*
+박승균: HTML 로그인 기본틀 제작
+*/
+
 import React from 'react';
 import axios from 'axios';
 import '../scss/login.scss';
