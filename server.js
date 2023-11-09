@@ -20,9 +20,8 @@ const cartRouter = require('./routes/cart');
 const categoryRouter = require('./routes/category');
 const loginRouter = require('./routes/login')
 
-const Product = require('./models/product')
-
-const router = express.Router();
+// const Product = require('./models/product')
+// const router = express.Router();
 
 //상수 multer에 "multer"라이브러리 가져옴
 const multer = require("multer");
