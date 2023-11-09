@@ -18,19 +18,31 @@ const DetailProd = () => {
     
 	//몇게 구매할지 정하는 숫자변수
 	const [number, setNumber] = useState(1);
-        if(userId){ //로그인 했을때만 작동하게
-            await axios.post(`${API_URL}/cart`, { userId, prodNum, quantity })
-            .then(() => {
-                alert("장바구니에 추가했습니다.")
-            })
-            .catch(err => {
-                console.error(err);
-            })
-        }else{
-            alert('로그인해주세요!');
-            return;
-        }
-    }
+	const increase = () => {
+		setNumber(number + 1);
+	};
+	const decrease = () => {
+			setNumber(number - 1);
+	};
+	const addCart = async () => {
+		const userId = getCookie('login');
+		const prodNum = state.detailProduct.prodNum; 
+		const quantity = number;
+
+		if(userId){ //로그인 했을때만 작동하게
+				await axios.post(`${API_URL}/cart`, { userId, prodNum, quantity })
+				.then(() => {
+						alert("장바구니에 추가했습니다.")
+				})
+				.catch(err => {
+						console.error(err);
+				})
+		}else{
+				alert('로그인해주세요!');
+				return;
+		}
+	}
+
     return (
         <div>
             <div className="product-card">
