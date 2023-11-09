@@ -1,16 +1,21 @@
+/*
+박승균: 전체제작
+*/
+
 @font-face {
     font-family: 'SOYOMapleBoldTTF';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
+//전체 박스 크기
 body{
     margin: 0 auto;
     width: 1000px;
     height: 1000px;
     font-family: 'SOYOMapleBoldTTF';
 }
-
+//회색박스 전체크기적용
 #f-bg{
     position: absolute;
     z-index: -1;
@@ -22,6 +27,7 @@ body{
     left: 0;
     
 }
+//사용 x
 #f-bf{
     width: 100%;
     position: absolute;
@@ -32,11 +38,12 @@ body{
     padding-top: 5px;
     
 }
+//옵션 박스
 .obtion{
     position: absolute;
 }
 
-// 첫번째 박스
+// 첫번째 맨위 박스
 section{
 height: 47px;
 background-color: #F2F2F2;
@@ -45,11 +52,11 @@ border-bottom: 1px solid;
 border-color: #BDBDBD;
 
 }
-//첫번째박스 글
+//section박스 패팅없애기
 .footer1 ul {
 padding: 0;
-
 }
+//section박스 a태그
 .footer1 ul a{
 border-right: 1px solid;
 float: left;
@@ -58,18 +65,18 @@ padding-right: 20px;
 color: #5A6672;
 font-size: 13px;
 font-weight: 1000;
-
-
 }
+//section박스 마우스 올렸을때 아래 밑줄이랑 파랑색으로 보이게하기
 .footer1 ul a:hover {
 text-decoration: underline ;
 text-decoration-color: blue; 
 }
+//section박스 맨뒤 보더 제거
 .footer1 ul a:last-child {
 border-right: none;
 }
 
-// 두번째박스
+// 두번째줄 박스
 .footer2{
 position: relative;
 width: 1000px;
@@ -78,14 +85,14 @@ border-bottom: 1px solid;
 border-color: #BDBDBD;
 align-items: center;
 padding-top: 5px;
-
-
 }
 
+//footer2안에 박스 패딩조절
 .footer2-1{
 padding-top: 15px;
-
 }
+
+//footer2-1 a태그
 .footer2-1 a{
 border-right: 1px solid;
 float: left;
@@ -94,61 +101,62 @@ padding-right: 20px;
 color: #5A6672;
 font-size: 10px;
 font-weight: 1000;
-
 }
-
+//a태그 마우스 올리면 아래 밑줄
 .footer2-1 a:hover {
 text-decoration: underline ;
+
+//footer2-1 a태그 맨뒤 보더 제거
 }
 .footer2-1 a:nth-child(8) {
 border-right: none;
+//footer2-1 2번째랑 8번째 색갈 빨강 
 }
 .footer2-1 a:nth-child(2) , a:nth-child(8) {
 color: red;
 text-decoration-color: black;
-
 }
 // 세번째박스
 .footer3{
     width: 1000px;
 }
+//footer3 패딩 없애서 왼쪽에 붙게하기
 .footer3 ul{
     padding: 0;
 }
-
+//footer3 h3크기 조절
 .footer3 h3{
 font-size: 10px;
-
-
 }
+//footer3 h2 가로로 늘리기, 마진제거, 오른쪽 밀기
 .footer3 h2{
 float: left;
 margin: 0;
 margin-right: 10px;
-
 }
+//footer3 버튼
 .footer3 button{
 float: left;
 margin-right: 10px;
-
 }
+
+//footer3 h4 사이즈조절, 마진제거
 .footer3 h4{
 font-size: 13px;
 margin: 0;
-
-
 }
+//bottom1 li글씨 가로로 하기 오른쪽밀기
 #bottom1 li{
 float: left;
 margin-right: 10px;
-
 }
 
+//bottom2 가로로 하기 오른쪽 밀기
 #bottom2 li{
 float: left;
 margin-right: 10px;
-
 }
+//bottom2 h2 사이즈조절 밑에 거리벌리기
 #bottom2 h2{
 font-size: 15px;
 line-height: 2;

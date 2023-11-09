@@ -1,14 +1,20 @@
+/*
+박승균 전체제작
+*/
+
+//로그인 폼 박스
 .Loginid{
   width: 330px;
   height: 400px;
   margin: auto ;
   line-height: 3;
 }
-
+//폼안에 아이디 비밀번호 input박스
 .Loginid input:nth-child(2), .Loginid input:nth-child(3){
   width: 323px;
   height: 30px;
 }
+//체크박스
 .Loginid div label{
   float: left;
   cursor: pointer;
@@ -16,9 +22,11 @@
   margin-right: 45px;
   
 }
+//폼안에 박스
 .Loginid div{
   margin-bottom: 60px;
 }
+//폼안에 아이디찾기, 비밀번호찾기 ,회원가입 a태그
 .Loginid div a{
   list-style: none;
   float: left;
@@ -29,10 +37,11 @@
   line-height: 1;
   margin-top: 16px;
 }
+//맨뒤 보드제거
 .Loginid a:last-child{
   border-right: none;
 }
-
+//로그인 버튼
 .Loginid button{
   width: 330px;
   height: 50px;
@@ -42,10 +51,12 @@
   border-color: #FF3E3E;
  margin-bottom: 50px;
 }
+//체크박스 라벨 높이, 사이즈
 #che{
   height: 10px;
   font-size: 14px;
 }
+//체크박스 오른쪽밀기
 #che input{
   margin-right: 5px;
 }

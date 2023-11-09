@@ -4,6 +4,16 @@
   제품, 장바구니 미들웨어 작성: ./routes/product.js, 
                               ./routes/cart.js
 
+
 조경익: 백엔드, 프론트엔드
 유재혁: 프론트엔드, css
+        header.js css,
+        DetailProd.js css,
+        Products.css 
 박승균: css 
+박승균: 프론트엔드, css 
+  컴포넌트 제작: Cart.js,Footer.js,Login.js
+  css제작: 
+    ./fooding/src/scss/Cart.scss
+    ./fooding/src/scss/Login.scss
+    ./fooding/src/scss/Footer.scss
