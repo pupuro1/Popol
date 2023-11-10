@@ -10,7 +10,7 @@ const morgan = require('morgan');
 const index = path.join(__dirname, 'fooding/build/index.html')
 
 const { sequelize } = require('./models');
-const indexRouter = require('./routes')
+const indexRouter = require('./routes');
 const userRouter = require('./routes/user');
 const orderRouter = require('./routes/order');
 const ODlRouter = require('./routes/orderDetail');
